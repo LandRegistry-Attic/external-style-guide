@@ -3,7 +3,7 @@ style-guide
 
 Canonical source of markup patterns and css
 
-The style-guide is a Flask application, with Grunt workflow to generate assets.
+The style-guide is a [Flask](http://flask.pocoo.org/) application, with [Grunt](http://gruntjs.com/) workflow to generate assets.
 
 
 ## Requirements
@@ -17,6 +17,10 @@ node --version
 ```
 
 Your version needs to be at least v0.10.0.
+
+* Grunt
+
+Make sure you've installed the Grunt command line interface --- see http://gruntjs.com/getting-started
 
 * The Sass ruby gem
 
