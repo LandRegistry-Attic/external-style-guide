@@ -18,4 +18,7 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "sass" task: https://github.com/gruntjs/grunt-contrib-sass
   grunt.loadNpmTasks('grunt-contrib-sass');
 
+  // Register the various Grunt commands:
+  grunt.registerTask('default', ['sass']);
+
 };
