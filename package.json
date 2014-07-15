@@ -1,0 +1,13 @@
+{
+  "name": "style-guide",
+  "version": "0.0.0",
+  "description": "Canonical markup and style source for Land Registry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LandRegistry/style-guide.git"
+  },
+  "homepage": "https://github.com/LandRegistry/style-guide",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
