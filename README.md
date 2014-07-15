@@ -34,8 +34,8 @@ When you've confirmed you have Ruby installed, run ```gem install sass``` to ins
 
 ## Getting started
 
-* Clone this repo.
+Once you've got the requirements in place:
 
-* If you don't have Node, download and install it from here: [http://nodejs.org/](http://nodejs.org/).
+* Clone this repo.
 
 * Ensure you’ve cd’ed into the style-guide folder, then ```npm install``` to install dependencies.
