@@ -1,0 +1,7 @@
+/* local styleguide includes */
+body {
+  color: #ff0000;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,28 +1,37 @@
 module.exports = function(grunt) {
 
+  var globalConfig = {
+    scss: {
+      dev: 'app/static/development/stylesheets/',
+      build: 'app/static/build/stylesheets/'
+    }
+  };
+
   // Project configuration.
   grunt.initConfig({
 
+    globalConfig: globalConfig,
+
     pkg: grunt.file.readJSON('package.json'),
 
-    /*sass: {
+    sass: {
       dev: {
         options: {
             style: 'expanded'
         },
         files: {
-          'main.css': 'main.scss'
+          '<%= globalConfig.scss.dev %>landregistry_main.css': '<%= globalConfig.scss.dev %>landregistry_main.scss'
         }
       },
-      dist: {
+      build: {
         options: {
             style: 'compressed'
         },
         files: {
-          'main.css': 'main.scss'
+          '<%= globalConfig.scss.build %>landregistry_main.css': '<%= globalConfig.scss.dev %>landregistry_main.scss'
         }
       }
-    },*/
+    },
 
     /*cssmin: {
       css: {
@@ -54,6 +63,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Register the various Grunt commands:
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['sass:dev']);
 
 };
