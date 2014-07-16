@@ -1,12 +1,33 @@
 from flask import Flask, render_template
 from flask.ext.assets import Environment
- 
-app = Flask(__name__)      
+
+import argparse
+import os
+
+app = Flask(__name__)
+
+# handle command line arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('-t', '--testbuild', action='store_true')
+args = parser.parse_args()
+
+app.config['TESTBUILD'] = args.testbuild
 
 # govuk_template asset path
 @app.context_processor
 def asset_path_context_processor():
-	return {'asset_path': '/static/development/govuk-template/'}
+  if app.config['TESTBUILD'] == True:
+  	return {
+      'asset_path': '/static/build/',
+      'landregistry_asset_path': '/static/build/',
+      'env_flag': 'Using BUILD'
+    }
+  else:
+    return {
+      'asset_path': '/static/development/govuk-template/',
+      'landregistry_asset_path': '/static/development/',
+      'env_flag': 'Using DEV'
+    }
 
 @app.route('/')
 def home():
