@@ -2,7 +2,7 @@
 
 
 {% block head %}
-  <link href="/static/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ landregistry_asset_path }}stylesheets/landregistry_main.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 
 
@@ -10,7 +10,7 @@
 {% block proposition_header %}
   <div class="header-proposition">
     <div class="content">
-      <a href="/" id="proposition-name">Land Registry</a>
+      <a href="/" id="proposition-name">{{ env_flag }}</a>
     </div>
   </div>
 {% endblock %}
