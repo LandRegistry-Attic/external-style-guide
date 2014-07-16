@@ -82,15 +82,15 @@ module.exports = function(grunt) {
       }
     },
 
-    /*watch: {
+    watch: {
       css: {
-        files: ['path-to-files'],
+        files: ['<%= globalConfig.scss.dev %>**/*.scss'],
         tasks: ['sass:dev'],
         options: {
           spawn: false,
         }
       }
-    },*/
+    },
 
   });
 
@@ -100,19 +100,21 @@ module.exports = function(grunt) {
   // css-min task - used to minify straight css files (i.e. the govuk_template files): https://github.com/gruntjs/grunt-contrib-cssmin
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  // copy task
+  // copy task: https://github.com/gruntjs/grunt-contrib-copy
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  // js uglify
+  // js uglify: https://github.com/gruntjs/grunt-contrib-uglify
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
 
   // watch task. Does what it says on the tin: https://github.com/gruntjs/grunt-contrib-watch
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Register the various Grunt commands:
-  grunt.registerTask('default', ['sass:dev']);
 
+  // 1: Default task - watch for changes in landregistry elements
+  grunt.registerTask('default', ['watch']);
+
+  // 2: Build task - copy and min ALL files to static/build/ maintaining the file structure
   grunt.registerTask('build', [
     'copy:govuk_template_css',
     'cssmin',
