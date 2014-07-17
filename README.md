@@ -38,9 +38,9 @@ When you've confirmed you have Ruby installed, run ```gem install sass``` to ins
 
 2. install [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/)
 
-Note very important the part in virtualenvwrapper install intructions about sourcing the virtualenvwrapper.sh in your .bash_profile, .zshrc or whatever for the shell you use.
+Note very important the part in virtualenvwrapper install intructions about sourcing the virtualenvwrapper.sh in your .bash_profile.
 
-On my machine I have the following in my .zshrc
+On my machine I have the following in my .bash_profile
 
 ```
 export WORKON_HOME=~/.virtualenvs
@@ -49,10 +49,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 So when I call ```mkvirtualenv some-name``` I get a some-name virtual environment directory in ~/.virtualenvs
 
-Now create a virtualenv for the flask-example project
+Now create a virtualenv for the style-guide project
 
 ```
-mkvirtualenv flask-examples
+mkvirtualenv style-guide
 ```
 
 This automatically activates the virtualenv. Once done any pip installs will install into that virtualenv.
@@ -70,4 +70,9 @@ Once you've got the requirements in place:
 
 * Clone this repo.
 * Ensure you’ve cd’ed into the style-guide folder, then ```npm install``` to install dependencies.
-* (steps to run, ideally just ```grunt```)
+* To run the server and have sass files watched: ```grunt```
+* To build minified and concatenated production assets: ```grunt build```
+
+You will want to *test* your build files before you submit a pull request!
+Do this once you have run ```grunt build```
+Run ```app/server.py --testbuild``` (or with ```-t```) --- this will run the server using the productions assets from /app/static/build/ _instead_ of our development assets.
