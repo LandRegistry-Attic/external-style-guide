@@ -5,15 +5,19 @@
 <main id="wrapper" role="main">
 
   <div id="content">
+  {% include "global/inc_alpha_banner.html" %}
     <div class="inner-block">
 
-      <h1>Hello world</h1>
+      <h1 class="heading-xlarge">
+              Elements - Heading 1 - xlarge
+        </h1>
       
       <div class="text">
         <p>hello</p>
         {{ config }}
       </div>
 
+		{% include "style-guide/inc_elements.html" %}
     </div>
   </div>
 
