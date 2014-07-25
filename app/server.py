@@ -25,7 +25,7 @@ def asset_path_context_processor():
     }
   else:
     return {
-      'asset_path': '/static/development/govuk-template/',
+      'asset_path': '/static/development/govuk_template/',
       'landregistry_asset_path': '/static/development/',
       'env_flag': 'Using DEV'
     }

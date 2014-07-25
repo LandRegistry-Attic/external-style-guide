@@ -2,9 +2,9 @@ module.exports = function(grunt) {
 
   var globalConfig = {
     govuk_template: {
-      css_dev: 'app/static/development/govuk-template/stylesheets/',
-      js_dev: 'app/static/development/govuk-template/javascripts/',
-      img_dev: 'app/static/development/govuk-template/images/'
+      css_dev: 'app/static/development/govuk_template/stylesheets/',
+      js_dev: 'app/static/development/govuk_template/javascripts/',
+      img_dev: 'app/static/development/govuk_template/images/'
     },
     scss: {
       dev: 'app/static/development/stylesheets/'
