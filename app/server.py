@@ -34,6 +34,11 @@ def asset_path_context_processor():
 def home():
   return render_template('style-guide/index.html')
 
+@app.route('/typography')
+def typography():
+  return render_template('style-guide/typography.html')
+
+
 #  Some useful headers to set to beef up the robustness of the app
 # https://www.owasp.org/index.php/List_of_useful_HTTP_headers
 @app.after_request
