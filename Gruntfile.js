@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       img_dev: 'app/static/development/govuk-template/images/'
     },
     scss: {
-      dev: 'app/static/development/stylesheets/'
+      dev: 'app/static/development/'
     },
     build: {
       css: 'app/static/build/stylesheets/',
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
-          '<%= globalConfig.scss.dev %>landregistry_main.css': '<%= globalConfig.scss.dev %>landregistry_main.scss'
+          '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.scss'
         }
       },
       build: {
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
             loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
-          '<%= globalConfig.build.css %>landregistry_main.css': '<%= globalConfig.scss.dev %>landregistry_main.scss'
+          '<%= globalConfig.build.css %>landregistry_main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.scss'
         }
       }
     },

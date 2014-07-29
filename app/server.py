@@ -21,24 +21,29 @@ def asset_path_context_processor():
   	return {
       'asset_path': '/static/build/',
       'landregistry_asset_path': '/static/build/',
-      'env_flag': 'Using BUILD'
+      'env_flag': 'build'
     }
   else:
     return {
       'asset_path': '/static/development/govuk-template/',
       'landregistry_asset_path': '/static/development/',
-      'env_flag': 'Using DEV'
+      'env_flag': 'development'
     }
 
 @app.route('/')
 def home():
   return render_template('style-guide/index.html')
 
+@app.route('/typography')
+def typography():
+  return render_template('style-guide/typography.html')
+
+
 #  Some useful headers to set to beef up the robustness of the app
 # https://www.owasp.org/index.php/List_of_useful_HTTP_headers
 @app.after_request
 def after_request(response):
-  response.headers.add('Content-Security-Policy', "default-src 'self'; font-src 'self' data:; image-src 'self' data:; script-src 'self' 'unsafe-inline'")
+  response.headers.add('Content-Security-Policy', "default-src 'self'; font-src 'self' data:; style-src 'self' 'unsafe-inline'; img-src http://placehold.it 'self' data:; script-src 'self' 'unsafe-inline'")
   response.headers.add('X-Frame-Options', 'deny')
   response.headers.add('X-Content-Type-Options', 'nosniff')
   response.headers.add('X-XSS-Protection', '1; mode=block')
