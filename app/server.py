@@ -34,6 +34,10 @@ def asset_path_context_processor():
 def home():
   return render_template('style-guide/index.html')
 
+@app.route('/html5elements')
+def html5elements():
+  return render_template('style-guide/html5-elements.html')
+
 #  Some useful headers to set to beef up the robustness of the app
 # https://www.owasp.org/index.php/List_of_useful_HTTP_headers
 @app.after_request
