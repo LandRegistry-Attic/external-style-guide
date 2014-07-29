@@ -26,7 +26,8 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-            style: 'expanded'
+            style: 'expanded',
+            loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
           '<%= globalConfig.scss.dev %>landregistry_main.css': '<%= globalConfig.scss.dev %>landregistry_main.scss'
@@ -34,7 +35,8 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
-            style: 'compressed'
+            style: 'compressed',
+            loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
           '<%= globalConfig.build.css %>landregistry_main.css': '<%= globalConfig.scss.dev %>landregistry_main.scss'
