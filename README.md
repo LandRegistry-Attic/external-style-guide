@@ -1,9 +1,15 @@
 style-guide
 ===========
 
-Canonical source of markup patterns and css
+Canonical source of markup patterns and css for Land Registry applications.
 
 The style-guide is a [Flask](http://flask.pocoo.org/) application, with [Grunt](http://gruntjs.com/) workflow to generate assets.
+
+It includes:
+
+* [GOVUK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) (as a [node package](https://www.npmjs.org/package/govuk_frontend_toolkit))
+* [GOVUK template](https://github.com/alphagov/govuk_template)
+* [GOVUK elements](https://github.com/alphagov/govuk_elements)
 
 
 ## Requirements
@@ -18,11 +24,11 @@ node --version
 
 Your version needs to be at least v0.10.0.
 
-### Grunt
+### [Grunt](http://gruntjs.com)
 
 Make sure you've installed the Grunt command line interface --- see http://gruntjs.com/getting-started
 
-### The Sass ruby gem
+### The [Sass](http://sass-lang.com/) ruby gem
 
 You probably already have Ruby installed, try
 
@@ -60,19 +66,24 @@ This automatically activates the virtualenv. Once done any pip installs will ins
 Anytime you want to activate the virtualenv from that point on, you just enter
 
 ```
-workon flask-example
+workon style-guide
 ```
 
 
 ## Getting started
 
-Once you've got the requirements in place:
+Once you've got the requirements in place, get the style guide in place:
 
 * Clone this repo.
 * Ensure you’ve cd’ed into the style-guide folder, then ```npm install``` to install dependencies.
+* Activate your virtual environment: ```workon style-guide```
+* Install Python requirements: ```pip install -r requirements.txt```
+
+## Running the application
+
 * To run the server and have sass files watched: ```grunt```
 * To build minified and concatenated production assets: ```grunt build```
 
 You will want to *test* your build files before you submit a pull request!
-Do this once you have run ```grunt build```
-Run ```app/server.py --testbuild``` (or with ```-t```) --- this will run the server using the productions assets from /app/static/build/ _instead_ of our development assets.
+
+Run ```app/server.py --testbuild``` (or with ```-t```) - this will run the server using the productions assets from /app/static/build/ _instead_ of our development assets. Check the footer of the style guide, it should say "Currently using *build* assets".
