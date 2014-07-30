@@ -38,6 +38,17 @@ def home():
 def typography():
   return render_template('style-guide/typography.html')
 
+@app.route('/data-visualisation')
+def data_visualisation():
+  return render_template('style-guide/data-visualisation.html')
+
+@app.route('/forms')
+def forms():
+  return render_template('style-guide/forms.html')
+
+@app.route('/todo')
+def todo():
+  return render_template('style-guide/todo.html')
 
 #  Some useful headers to set to beef up the robustness of the app
 # https://www.owasp.org/index.php/List_of_useful_HTTP_headers
