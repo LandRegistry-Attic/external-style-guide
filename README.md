@@ -84,6 +84,12 @@ Once you've got the requirements in place, get the style guide in place:
 * To run the server and have sass files watched: ```grunt```
 * To build minified and concatenated production assets: ```grunt build```
 
+When running the app with ```grunt``` you will be linked to development assets (i.e. non-minified). This will be shown in the footer of the style guide:
+
+![Footer message showing development assets](https://github.com/LandRegistry/style-guide/blob/gh-pages/readme-images/using-dev-assets.png)
+
 You will want to *test* your build files before you submit a pull request!
 
 Run ```app/server.py --testbuild``` (or with ```-t```) - this will run the server using the productions assets from /app/static/build/ _instead_ of our development assets. Check the footer of the style guide, it should say "Currently using *build* assets".
+
+![Footer message showing build assets](https://github.com/LandRegistry/style-guide/blob/gh-pages/readme-images/using-build-assets.png)
