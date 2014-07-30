@@ -2,9 +2,13 @@
 
 {% block content %}
 
-<main id="wrapper" role="main">
+{% include "style-guide/includes/inline-styles.html" %}
 
+<main id="wrapper" role="main">
   <div id="content">
+    
+    {% include "style-guide/includes/alpha_banner.html" %}
+    
     <div class="inner-block">
 
       <div class="text">
@@ -20,6 +24,7 @@
           <li>example tables</li>
           <li>tables for mobile devices - if necessary</li>
           <li>example forms</li>
+          <li><b>Remove</b> inline-styles.html - style guide should be built from itself, no extraneous css!</li>
         </ul>
 
     </div>
