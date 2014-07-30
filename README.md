@@ -3,6 +3,8 @@ style-guide
 
 Canonical source of markup patterns and css for Land Registry applications.
 
+## Introduction
+
 The style-guide is a [Flask](http://flask.pocoo.org/) application, with [Grunt](http://gruntjs.com/) workflow to generate assets.
 
 It includes:
@@ -11,8 +13,18 @@ It includes:
 * [GOVUK template](https://github.com/alphagov/govuk_template)
 * [GOVUK elements](https://github.com/alphagov/govuk_elements)
 
+## How does it contribute to Land Registry applications?
 
-## Requirements
+Applications that have a front end should consume the following assets:
+
+* /app/static/build/*
+* /app/templates/global/*
+
+Currently (30-07-2014) those applications are [property-frontend](https://github.com/LandRegistry/property-frontend) and [service-frontend](https://github.com/LandRegistry/service-frontend).
+
+"Consuming" is simply a case of making sure assets are up to date - this is a manual task. Simply check out the style-guide repo, then copy across the assets mentioned above.
+
+## Style guide requirements
 
 ### [Node](http://nodejs.org/)
 
@@ -21,8 +33,6 @@ You may already have it, try:
 ```
 node --version
 ```
-
-Your version needs to be at least v0.10.0.
 
 ### [Grunt](http://gruntjs.com)
 
@@ -69,10 +79,9 @@ Anytime you want to activate the virtualenv from that point on, you just enter
 workon style-guide
 ```
 
-
 ## Getting started
 
-Once you've got the requirements in place, get the style guide in place:
+Once you've got the requirements in place, get the style guide installed:
 
 * Clone this repo.
 * Ensure you’ve cd’ed into the style-guide folder, then ```npm install``` to install dependencies.
@@ -82,11 +91,14 @@ Once you've got the requirements in place, get the style guide in place:
 ## Running the application
 
 * To run the server and have sass files watched: ```grunt```
-* To build minified and concatenated production assets: ```grunt build```
 
 When running the app with ```grunt``` you will be linked to development assets (i.e. non-minified). This will be shown in the footer of the style guide:
 
 ![Footer message showing development assets](https://github.com/LandRegistry/style-guide/blob/gh-pages/readme-images/using-dev-assets.png)
+
+## Creating build assets
+
+* To build minified and concatenated production assets: ```grunt build```
 
 You will want to *test* your build files before you submit a pull request!
 
