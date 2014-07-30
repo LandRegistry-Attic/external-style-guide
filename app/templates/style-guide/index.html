@@ -3,26 +3,32 @@
 {% block content %}
 
 <main id="wrapper" role="main">
-
   <div id="content">
+
+    {% include "style-guide/includes/alpha_banner.html" %}
+
     <div class="inner-block">
 
-      <h1 class="heading-xlarge">Style guide</h1>
+      <h1 class="heading-xlarge">Land Registry style guide</h1>
+
       <div class="text">
-        <p class="lede">Intro para</p>
-        <p>More bits</p>
+        <p class="lede">This guide demonstrates styles and modules for Land Registry applications.</p>
+
+        <p>The guide is built on top of the <a href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK frontend toolkit</a>, the <a href="https://github.com/alphagov/govuk_template">GOV.UK template</a>, and <a href="http://govuk-elements.herokuapp.com/">GOV.UK elements</a>.</p>
+        
+        <p>In particular, <a href="http://govuk-elements.herokuapp.com/">GOV.UK elements</a> provides a large number of useful styles. Please get familiar with it!</p>
       </div>
 
-      <ul>
+      <ol>
         <li><a href="typography">Typography</a></li>
         <li><a href="data-visualisation">Data visualisation</a></li>
         <li><a href="forms">Forms</a></li>
         <li><a href="todo">to do list</a></li>
-      </ul>
+      </ol>
 
     </div>
-  </div>
 
+  </div>
 </main>
 
 {% endblock %}
