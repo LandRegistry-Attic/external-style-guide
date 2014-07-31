@@ -30,7 +30,8 @@ module.exports = function(grunt) {
             loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
-          '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.scss'
+          '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry_main.scss',
+          '<%= globalConfig.scss.dev %>style-guide-only/style_guide_only.css': '<%= globalConfig.scss.dev %>style-guide-only/style_guide_only.scss'
         }
       },
       build: {

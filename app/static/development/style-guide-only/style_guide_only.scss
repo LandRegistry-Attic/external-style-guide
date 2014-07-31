@@ -1,0 +1,25 @@
+// GOVUK Frontend Toolkit
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets (see Gruntfile.js)
+// ==========================================================================
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+
+// STYLE GUIDE ONLY - Just presentational helpers for the guide. This should be SMALL!
+// ===================================================================================
+
+.example {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+pre {
+  margin: 30px 0; 
+}
