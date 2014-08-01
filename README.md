@@ -153,5 +153,5 @@ def asset_path_context_processor():
 
 Commit all of the above to your repo.
 
-When updates to the style guide are made, repeat the above and overwrite your
-application’s global templates and build directory assets.
+When updates to the style guide are made, repeat the above and overwrite
+your application’s global templates and build directory assets.
