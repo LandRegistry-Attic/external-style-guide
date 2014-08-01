@@ -107,7 +107,7 @@ Copy the build directory from app/static/ into your application static directory
 yourapp/static/build
 ```
 
-Copy the global directory form app/templates to your templates directory so that you have;
+Copy the global directory from app/templates to your templates directory so that you have:
 
 ```
 yourapp/templates/global
@@ -154,4 +154,4 @@ def asset_path_context_processor():
 Commit all of the above to your repo.
 
 When updates to the style-guide are made. Repeat the above and over write your
-applications global templates and build directory assets.
+application's global templates and build directory assets.
