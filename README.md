@@ -12,6 +12,7 @@ It includes:
 * [GOVUK frontend toolkit](https://github.com/alphagov/govuk_frontend_toolkit) (as a [node package](https://www.npmjs.org/package/govuk_frontend_toolkit))
 * [GOVUK template](https://github.com/alphagov/govuk_template)
 * [GOVUK elements](https://github.com/alphagov/govuk_elements)
+* [leaflet js - 0.7.3](http://leafletjs.com/download.html)
 
 ## How does it contribute to Land Registry applications?
 
@@ -20,7 +21,7 @@ Applications that have a front end should consume the following assets:
 * /app/static/build/*
 * /app/templates/global/*
 
-Currently (30-07-2014) those applications are [property-frontend](https://github.com/LandRegistry/property-frontend) and [service-frontend](https://github.com/LandRegistry/service-frontend).
+Currently (01-08-2014) those applications are [property-frontend](https://github.com/LandRegistry/property-frontend) and [service-frontend](https://github.com/LandRegistry/service-frontend).
 
 "Consuming" is simply a case of making sure assets are up to date - this is a manual task. Simply check out the style-guide repo, then copy across the assets mentioned above.
 
@@ -162,6 +163,16 @@ def asset_path_context_processor():
       'asset_path': '/static/build/',
       'landregistry_asset_path': '/static/build/'
     }
+
+```
+
+To use leaflet include the following in your base template (head_additionals because leaflet requires the js to be loaded before the page content has fully rendered)
+
+```
+{% block head_additionals %}
+  <script src="{{ asset_path }}javascripts/vendor/leaflet//eaf/et.js" type="text/javascript"></script>
+  <link href="{{ asset_path }}javascripts/vendor/leaflet/leaflet.css" media="all" rel="stylesheet" type="text/css" />
+{% endblock %}
 
 ```
 

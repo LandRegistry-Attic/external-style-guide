@@ -13,6 +13,9 @@ module.exports = function(grunt) {
       css: 'app/static/build/stylesheets/',
       js: 'app/static/build/javascripts/',
       img: 'app/static/build/images/'
+    },
+    vendor: {
+      leaflet_js: 'app/static/development/vendor/leaflet-0-7-3/'
     }
   };
 
@@ -51,6 +54,12 @@ module.exports = function(grunt) {
         cwd: '<%= globalConfig.build.css %>',
         src: '*.css',
         dest: '<%= globalConfig.build.css %>'
+      },
+      leaflet_js: {
+        expand: true,
+        cwd: '<%= globalConfig.build.js %>/vendor/leaflet/leaflet.css',
+        src: '*.css',
+        dest: '<%= globalConfig.build.js %>/vendor/leaflet/leaflet.css'
       }
     },
 
@@ -65,6 +74,12 @@ module.exports = function(grunt) {
         cwd: '<%= globalConfig.govuk_template.img_dev %>',
         src: '**/*',
         dest: '<%= globalConfig.build.img %>',
+        expand: true
+      },
+      leaflet_js: {
+        cwd: '<%= globalConfig.vendor.leaflet_js %>',
+        src: '**/*',
+        dest: '<%= globalConfig.build.js %>/vendor/leaflet/',
         expand: true
       }
     },
@@ -141,10 +156,12 @@ module.exports = function(grunt) {
   // 2: Build task - copy and min ALL files to static/build/ maintaining the file structure
   grunt.registerTask('build', [
     'copy:govuk_template_css',
-    'cssmin',
+    'cssmin:minify',
     'sass:build',
     'uglify',
     'copy:govuk_template_img',
+    'copy:leaflet_js',
+    'cssmin:leaflet_js',
   ]);
 
 };
