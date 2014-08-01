@@ -93,3 +93,65 @@ You will want to *test* your build files before you submit a pull request!
 Run ```app/server.py --testbuild``` (or with ```-t```) - this will run the server using the productions assets from /app/static/build/ _instead_ of our development assets. Check the footer of the style guide, it should say "Currently using *build* assets".
 
 ![Footer message showing build assets](https://github.com/LandRegistry/style-guide/blob/gh-pages/readme-images/using-build-assets.png)
+
+
+## Using the base templates and assets in Land Registry Flask projects
+
+The master zip of the project contains all the built files and templates needed.
+
+[Download](https://github.com/LandRegistry/style-guide/archive/master.zip) and upack the the zip file.
+
+Copy the build directory from app/static/ into your application static directory so that you have
+
+```
+yourapp/static/build
+```
+
+Copy the global directory form app/templates to your templates directory so that you have;
+
+```
+yourapp/templates/global
+```
+
+Create a base template in the root of your templates directory that looks like this:
+
+```
+{% extends "global/landregistry_base.html" %}
+
+{% block header_class %}with-proposition{% endblock %}
+{% block proposition_header %}
+  <div class="header-proposition">
+    <div class="content">
+      <a href="/" id="proposition-name">Land registry</a>
+    </div>
+  </div>
+{% endblock %}
+```
+
+If for example your base template above is called someapp_base.html, then the
+application templates can just inherit from this one, e.g.
+
+```
+{% extends "someapp_base.html" %}
+.
+.
+.
+
+```
+
+Add the following to your application (probably in the __init__.py):
+
+```
+@app.context_processor
+def asset_path_context_processor():
+    return {
+      'asset_path': '/static/build/',
+      'landregistry_asset_path': '/static/build/'
+    }
+
+```
+
+Commit all of the above to your repo.
+
+When updates to the style-guide are made. Repeat the above and over write your
+applications global templates and build directory assets.
