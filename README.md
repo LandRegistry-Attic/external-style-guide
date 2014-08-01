@@ -24,6 +24,8 @@ Currently (30-07-2014) those applications are [property-frontend](https://github
 
 "Consuming" is simply a case of making sure assets are up to date - this is a manual task. Simply check out the style-guide repo, then copy across the assets mentioned above.
 
+See [below](#user-content-using-the-base-templates-and-assets-in-land-registry-flask-projects) for more details.
+
 ## Style guide requirements
 
 ### [Node](http://nodejs.org/)
