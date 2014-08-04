@@ -57,9 +57,9 @@ module.exports = function(grunt) {
       },
       leaflet_js: {
         expand: true,
-        cwd: '<%= globalConfig.build.js %>/vendor/leaflet/leaflet.css',
+        cwd: '<%= globalConfig.build.js %>/vendor/leaflet/',
         src: '*.css',
-        dest: '<%= globalConfig.build.js %>/vendor/leaflet/leaflet.css'
+        dest: '<%= globalConfig.build.js %>/vendor/leaflet/'
       }
     },
 
