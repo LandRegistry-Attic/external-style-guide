@@ -170,7 +170,7 @@ To use leaflet include the following in your base template (head_additionals bec
 
 ```
 {% block head_additionals %}
-  <script src="{{ asset_path }}javascripts/vendor/leaflet//eaf/et.js" type="text/javascript"></script>
+  <script src="{{ asset_path }}javascripts/vendor/leaflet/leaflet.js" type="text/javascript"></script>
   <link href="{{ asset_path }}javascripts/vendor/leaflet/leaflet.css" media="all" rel="stylesheet" type="text/css" />
 {% endblock %}
 
