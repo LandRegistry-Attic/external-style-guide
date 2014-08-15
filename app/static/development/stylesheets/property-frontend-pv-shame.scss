@@ -1,0 +1,115 @@
+// GOVUK Frontend Toolkit
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets (see Gruntfile.js)
+// ==========================================================================
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+
+
+// GOVUK Elements
+// ==========================================================================
+
+// Helpers
+@import "../govuk-elements/helpers";
+
+// Reset
+@import "../govuk-elements/reset";
+
+// Typography
+@import "../govuk-elements/typography";
+
+// Layout
+@import "../govuk-elements/layout";
+
+
+
+// GOVUK Elements - Modules
+// ==========================================================================
+
+// Forms
+@import "../govuk-elements/forms";
+
+// Tables
+@import "../govuk-elements/tables";
+
+// Buttons
+@import "../govuk-elements/buttons";
+
+// Details
+@import "../govuk-elements/details";
+
+// Lists
+@import "../govuk-elements/lists";
+
+// Panels
+@import "../govuk-elements/panels";
+
+// Colours
+@import "../govuk-elements/colours";
+
+// Icons
+@import "../govuk-elements/icons";
+
+
+// Property view specifics
+// ==========================================================================
+
+.content-title {
+    color: $grey-1;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.pw-summary {
+    margin-bottom: $gutter;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.adr {
+  margin-bottom: $gutter;
+  padding: $gutter 0;
+  border-bottom: 1px solid $grey-2;
+}
+
+dd {
+    font-weight: bold;
+}
+
+.inline {
+  @extend %contain-floats;
+
+  dt {
+    @include media(tablet) {
+      float: left;
+      clear: left;
+      width: $half;
+      margin-bottom: $gutter-one-third;
+    }
+    &:after {
+      content: ':';
+    }
+  }
+
+  dd {
+    margin-bottom: $gutter-one-third;
+    @include media(tablet) {
+      float: left;
+      width: $half;
+    }
+  }
+
+}
+
+#map {
+    margin-top: $gutter;
+}
