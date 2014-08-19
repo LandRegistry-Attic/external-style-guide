@@ -1,0 +1,108 @@
+// GOVUK Frontend Toolkit
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets (see Gruntfile.js)
+// ==========================================================================
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// Land Registry Elements
+// ==========================================================================
+@import "../landregistry-elements/tags";
+
+// Property view specifics
+// ==========================================================================
+// styles for the blue summary box at top of page
+.summary {
+    margin: $gutter 0;
+    padding: $gutter;
+    color: $white;
+    background-color: $light-blue;
+
+    @extend %contain-floats;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .title-flag {
+        @include highlight-tag($light-blue, $white);
+    }
+
+    .lede {
+      margin-bottom: $gutter;
+      padding: $gutter 0;
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+    }
+}
+
+dd {
+    font-weight: bold;
+}
+
+.inline {
+  @extend %contain-floats;
+
+  dt {
+    @include media(tablet) {
+      float: left;
+      clear: left;
+      width: $one-quarter;
+      margin-bottom: $gutter-one-third;
+    }
+    &:after {
+      content: ':';
+    }
+  }
+
+  dd {
+    margin-bottom: $gutter-one-third;
+    @include media(tablet) {
+      float: left;
+      width: $three-quarters;
+    }
+  }
+}
+
+.change a {
+    color: $yellow;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.notification {
+    margin: $gutter 0;
+    padding: $gutter;
+    background-color: $yellow-25;
+
+    [class*="heading-"] {
+        margin: 0;
+    }
+
+    form & {
+        margin-top: 0;
+    }
+}
+
+.notification__highlight {
+    font-weight: bold;
+}
+
+.divider {
+    border-top: 1px solid $border-colour;
+    margin-top: $gutter;
+    padding: $gutter 0;
+}
+
+.optional-section {
+    margin-bottom: 0;
+}

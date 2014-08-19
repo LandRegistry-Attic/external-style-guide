@@ -1,0 +1,20 @@
+// Highlight tags - much like the Alpha, Beta tags in govuk_toolkit
+// ==========================================================================
+
+@mixin highlight-tag($text-colour: #000, $bg-colour: #fff) {
+  @include inline-block;
+  vertical-align: top;
+
+  @include media(tablet) {
+    vertical-align: baseline;
+  }
+
+  margin: 0 8px 0 0;
+  padding: 2px 5px 0;
+
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  color: $text-colour;
+  background-color: $bg-colour;
+}
