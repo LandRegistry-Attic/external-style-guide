@@ -46,6 +46,10 @@ def data_visualisation():
 def forms():
   return render_template('style-guide/forms.html')
 
+@app.route('/modules')
+def modules():
+  return render_template('style-guide/modules.html')
+
 @app.route('/todo')
 def todo():
   return render_template('style-guide/todo.html')
