@@ -23,7 +23,7 @@ Applications that have a front end should consume the following assets:
 
 Currently (01-08-2014) those applications are [property-frontend](https://github.com/LandRegistry/property-frontend) and [service-frontend](https://github.com/LandRegistry/service-frontend).
 
-"Consuming" is simply a case of making sure assets are up to date - this is a manual task. Simply check out the style-guide repo, then copy across the assets mentioned above.
+"Consuming" is simply a case of making sure assets are up to date - this is *currently* a manual task. Simply check out the style-guide repo, then copy across the assets mentioned above.
 
 See [below](#user-content-using-the-base-templates-and-assets-in-land-registry-flask-projects) for more details.
 
@@ -51,49 +51,13 @@ ruby -v
 
 When you've confirmed you have Ruby installed, run ```gem install sass``` to install Sass.
 
-### A Python virtual environment
-
-1. install [virtualenv](https://virtualenv.pypa.io/en/latest)
-
-2. install [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/)
-
-Note very important the part in virtualenvwrapper install intructions about sourcing the virtualenvwrapper.sh in your .bash_profile.
-
-On my machine I have the following in my .bash_profile
-
-```
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-```
-
-So when I call ```mkvirtualenv some-name``` I get a some-name virtual environment directory in ~/.virtualenvs
-
-Now create a virtualenv for the style-guide project
-
-```
-mkvirtualenv style-guide
-```
-
-This automatically activates the virtualenv. Once done any pip installs will install into that virtualenv.
-
-Anytime you want to activate the virtualenv from that point on, you just enter
-
-```
-workon style-guide
-```
-
 ## Getting started
 
-Once you've got the requirements in place, get the style guide installed:
+Once you've got the requirements in place, get the [development environment](https://github.com/LandRegistry/development-environment) installed - style guide runs within this. You can run the style guide alone or as part of ```lr-run-all-apps``` - see the README for [development environment](https://github.com/LandRegistry/development-environment).
 
-* Clone this repo.
-* Ensure you’ve cd’ed into the style-guide folder, then ```npm install``` to install dependencies.
-* Activate your virtual environment: ```workon style-guide```
-* Install Python requirements: ```pip install -r requirements.txt```
+## Watching sass files
 
-## Running the application
-
-* To run the server and have sass files watched: ```grunt```
+* To have sass files watched while you're working: ```grunt```
 
 When running the app with ```grunt``` you will be linked to development assets (i.e. non-minified). This will be shown in the footer of the style guide:
 
@@ -103,7 +67,10 @@ When running the app with ```grunt``` you will be linked to development assets (
 
 * To build minified and concatenated production assets: ```grunt build```
 
-You will want to *test* your build files before you submit a pull request!
+
+*THIS SECTION NEEDS WORK - need to work this out in the development environment*
+
+You will want to *test* your build files before you submit a pull request for them!
 
 Run ```app/server.py --testbuild``` (or with ```-t```) - this will run the server using the productions assets from /app/static/build/ _instead_ of our development assets. Check the footer of the style guide, it should say "Currently using *build* assets".
 
