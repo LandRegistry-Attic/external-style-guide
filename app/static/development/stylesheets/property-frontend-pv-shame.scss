@@ -38,35 +38,6 @@
   border-bottom: 1px solid $grey-2;
 }
 
-dd {
-    font-weight: bold;
-}
-
-.inline {
-  @extend %contain-floats;
-
-  dt {
-    @include media(tablet) {
-      float: left;
-      clear: left;
-      width: $half;
-      margin-bottom: $gutter-one-third;
-    }
-    &:after {
-      content: ':';
-    }
-  }
-
-  dd {
-    margin-bottom: $gutter-one-third;
-    @include media(tablet) {
-      float: left;
-      width: $half;
-    }
-  }
-
-}
-
 #map {
     margin-top: $gutter;
 }
