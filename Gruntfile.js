@@ -1,6 +1,15 @@
 module.exports = function(grunt) {
 
   var globalConfig = {
+    govuk_toolkit: {
+      js: {
+        path: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/javascripts/',
+        files: [
+          'govuk/selection-buttons.js',
+          'vendor/polyfills/bind.js'
+        ]
+      }
+    },
     govuk_template: {
       css_dev: 'app/static/development/govuk-template/stylesheets/',
       js_dev: 'app/static/development/govuk-template/javascripts/',
@@ -70,6 +79,12 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      govuk_toolkit_js: {
+        cwd: '<%= globalConfig.govuk_toolkit.js.path %>',
+        src: globalConfig.govuk_toolkit.js.files,
+        dest: 'app/static/development/javascripts',
+        expand: true
+      },
       govuk_template_css: {
         cwd: '<%= globalConfig.govuk_template.css_dev %>', // set working folder / root to copy
         src: '**/*', // copy all files and subfolders
@@ -114,6 +129,19 @@ module.exports = function(grunt) {
           spawn: false,
         }
       }
+    },
+
+    concat: {
+      options: {
+        separator: "\n", // add new line after each file
+      },
+      dist: {
+        src: [
+          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/bind.js',
+          '<%= globalConfig.govuk_toolkit.js.path %>govuk/selection-buttons.js'
+        ],
+        dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
+      }
     }
 
   });
@@ -133,6 +161,8 @@ module.exports = function(grunt) {
   // watch task. Does what it says on the tin: https://github.com/gruntjs/grunt-contrib-watch
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  // Concat - used to concatenate files, mainly for js
+  grunt.loadNpmTasks('grunt-contrib-concat');
   // Register the various Grunt commands:
 
   // 1: Default task - watch for changes in landregistry elements, and serve the app
@@ -147,6 +177,10 @@ module.exports = function(grunt) {
     'copy:govuk_template_img',
     'copy:leaflet_js',
     'cssmin:leaflet_js',
+    'concat'
   ]);
+
+  // 3: Update task - copy updates to govuk assets
+  grunt.registerTask('update', ['copy:govuk_toolkit_js']);
 
 };
