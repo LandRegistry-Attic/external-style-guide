@@ -10,7 +10,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .summary:after, .summary .lede:after, .inline:after {
+#content:after, .inline:after, .summary:after, .summary .lede:after {
   content: "";
   display: block;
   clear: both;
@@ -42,7 +42,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .summary:after, .summary .lede:after, .inline:after {
+#content:after, .inline:after, .summary:after, .summary .lede:after {
   content: "";
   display: block;
   clear: both;
@@ -60,7 +60,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .summary:after, .summary .lede:after, .inline:after {
+#content:after, .inline:after, .summary:after, .summary .lede:after {
   content: "";
   display: block;
   clear: both;
@@ -72,7 +72,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .summary:after, .summary .lede:after, .inline:after {
+#content:after, .inline:after, .summary:after, .summary .lede:after {
   content: "";
   display: block;
   clear: both;
@@ -1490,6 +1490,29 @@ ol li {
   }
 }
 
+/* dd */
+@media (min-width: 641px) {
+  .inline dt {
+    float: left;
+    clear: left;
+    width: 25%;
+    margin-bottom: 10px;
+  }
+}
+.inline dt:after {
+  content: ':';
+}
+.inline dd {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (min-width: 641px) {
+  .inline dd {
+    float: left;
+    width: 75%;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1528,7 +1551,7 @@ pre code {
   color: white;
   background-color: #2b8cc4;
 }
-.summary h1 {
+.summary [class*='heading'] {
   margin-top: 0;
 }
 .summary .title-flag {
@@ -1553,31 +1576,6 @@ pre code {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
-.summary .title-plan img {
+.summary .title-plan {
   border: 2px solid white;
-}
-
-dd {
-  font-weight: bold;
-}
-
-@media (min-width: 641px) {
-  .inline dt {
-    float: left;
-    clear: left;
-    width: 25%;
-    margin-bottom: 10px;
-  }
-}
-.inline dt:after {
-  content: ':';
-}
-.inline dd {
-  margin-bottom: 10px;
-}
-@media (min-width: 641px) {
-  .inline dd {
-    float: left;
-    width: 75%;
-  }
 }
