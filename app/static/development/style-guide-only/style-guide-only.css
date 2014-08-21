@@ -68,3 +68,11 @@
 pre {
   margin: 30px 0;
 }
+
+.style-section {
+  border-top: 1px solid #dee0e2;
+}
+
+.style-unit {
+  border-top: 1px dotted #dee0e2;
+}
