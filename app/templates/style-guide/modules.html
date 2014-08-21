@@ -28,7 +28,9 @@
       <p>See _callouts.scss and _typography.scss</p>
 
       <div class="module-example">
-        {% include "style-guide/modules/summary.html" %}
+        <pre>
+        {{ include_raw('style-guide/modules/summary.html') | escape }}
+        </pre>
       </div>
 
       <!--
