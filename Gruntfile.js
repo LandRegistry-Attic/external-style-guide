@@ -131,21 +131,6 @@ module.exports = function(grunt) {
       }
     },
 
-    shell: {
-      makeDir: {
-        command: 'python app/server.py'
-      }
-    },
-
-    concurrent: {
-      target: {
-        tasks: ['watch', 'shell'],
-        options: {
-          logConcurrentOutput: true
-        }
-      }
-    },
-
     concat: {
       options: {
         separator: "\n", // add new line after each file
@@ -176,19 +161,12 @@ module.exports = function(grunt) {
   // watch task. Does what it says on the tin: https://github.com/gruntjs/grunt-contrib-watch
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Shell - run shell script tasks: https://github.com/sindresorhus/grunt-shell
-  grunt.loadNpmTasks('grunt-shell');
-
-  // Concurrent - allows us to run the server and the watch at the same time: https://github.com/sindresorhus/grunt-concurrent
-  grunt.loadNpmTasks('grunt-concurrent');
-
   // Concat - used to concatenate files, mainly for js
   grunt.loadNpmTasks('grunt-contrib-concat');
-
   // Register the various Grunt commands:
 
   // 1: Default task - watch for changes in landregistry elements, and serve the app
-  grunt.registerTask('default', ['concurrent']);
+  grunt.registerTask('default', ['watch']);
 
   // 2: Build task - copy and min ALL files to static/build/ maintaining the file structure
   grunt.registerTask('build', [
