@@ -10,7 +10,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .inline:after, .callout:after, .callout--summary .lede:after {
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -42,7 +42,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .inline:after, .callout:after, .callout--summary .lede:after {
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -60,7 +60,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .inline:after, .callout:after, .callout--summary .lede:after {
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -72,7 +72,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .inline:after, .callout:after, .callout--summary .lede:after {
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -1196,12 +1196,12 @@ ol li {
   margin-bottom: 5px;
 }
 
-.list-bullet, ul {
+.list-bullet {
   list-style-type: disc;
   margin-left: 20px;
 }
 
-.list-number, ol {
+.list-number {
   list-style-type: decimal;
   margin-left: 25px;
 }
@@ -1581,4 +1581,10 @@ pre code {
 }
 .callout--summary .title-plan {
   border: 2px solid white;
+}
+
+.result {
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #bfc1c3;
 }

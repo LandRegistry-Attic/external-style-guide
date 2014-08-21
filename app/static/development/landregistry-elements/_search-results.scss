@@ -1,0 +1,10 @@
+// Search results - a list of property results
+// ==========================================================================
+
+.result {
+    padding-bottom: $gutter-half;
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $grey-2;
+    
+    @extend %contain-floats;
+}
