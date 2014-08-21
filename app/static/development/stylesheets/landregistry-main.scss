@@ -1,5 +1,6 @@
 // GOVUK Frontend Toolkit
-// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets (see Gruntfile.js)
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+// (see Gruntfile.js)
 // ==========================================================================
 
 @import "colours";
@@ -59,8 +60,14 @@
 
 
 
-// GOVUK Elements - Modules
+// Land Registry style guide elements
 // ==========================================================================
 
 // Basic typography
 @import "../landregistry-elements/typography";
+
+// "Tags"
+@import "../landregistry-elements/tags";
+
+// "Summary" block
+@import "../landregistry-elements/callouts";

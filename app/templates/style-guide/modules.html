@@ -1,0 +1,48 @@
+{% extends "style-guide/styleguide_base.html" %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+    
+    {% include "style-guide/includes/alpha_banner.html" %}
+    
+    <div class="inner-block">
+
+      <div class="text">
+
+        <h1>Modules</h1>
+        <p class="lede">Modules (ui elements) are...</p>
+
+      </div>
+
+    </div>
+
+    <div class="inner-block style-section">
+      <h2>Callouts</h2>
+      <p>Summaries, alerts, notifications</p>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Summary</h3>
+      <p class="text">See _callouts.scss and _typography.scss</p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/summary.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/summary.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

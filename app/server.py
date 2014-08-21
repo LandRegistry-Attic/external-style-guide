@@ -6,6 +6,7 @@ import os
 
 app = Flask(__name__)
 app.debug = True
+app.jinja_env.globals['include_raw'] = lambda filename : app.jinja_loader.get_source(app.jinja_env, filename)[0]
 
 # handle command line arguments
 parser = argparse.ArgumentParser()
@@ -45,6 +46,10 @@ def data_visualisation():
 @app.route('/forms')
 def forms():
   return render_template('style-guide/forms.html')
+
+@app.route('/modules')
+def modules():
+  return render_template('style-guide/modules.html')
 
 @app.route('/todo')
 def todo():

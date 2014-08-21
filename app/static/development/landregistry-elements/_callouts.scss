@@ -1,0 +1,38 @@
+// Callout elements - summaries, alerts, notifications
+// ==========================================================================
+
+// Callout - A coloured box
+.callout {
+  margin: $gutter 0;
+  padding: $gutter;
+
+  @extend %contain-floats;
+
+  .first-heading {
+    margin-top: 0;
+  }
+}
+
+// Summary - Register View for example
+.callout--summary {
+  color: $white;
+  background-color: $light-blue;
+
+  .title-flag {
+    @include highlight-tag($light-blue, $white);
+  }
+
+  .lede {
+    margin-bottom: $gutter;
+    padding: $gutter 0;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+
+    @extend %contain-floats;
+  }
+
+  .title-plan {
+    border: 2px solid $white;
+  }
+
+}

@@ -1,3 +1,9 @@
+// TYPOGRAPHY
+// extends or overrides GOVUK Elements in most cases
+// ==========================================================================
+
+// Headings
+
 h1 {
   @extend .heading-xlarge;
 }
@@ -6,7 +12,6 @@ h2 {
   @extend .heading-large;
 }
 
-// ?
 h3 {
   @extend .heading-medium;
 }
@@ -14,6 +19,8 @@ h3 {
 h4, h5, h6 {
   @extend .heading-small;
 }
+
+// List elements
 
 ul {
   @extend .list-bullet;
@@ -23,10 +30,47 @@ ol {
   @extend .list-number;
 }
 
+dd {
+}
+
+// An inline definition list - name:value pairs for example
+
+/* dd */.inline {
+  @extend %contain-floats;
+
+  dt {
+
+    @include media(tablet) {
+      float: left;
+      clear: left;
+      width: $one-quarter;
+      margin-bottom: $gutter-one-third;
+    }
+
+    &:after {
+      content: ':';
+    }
+  }
+
+  dd {
+    font-weight: bold;
+    margin-bottom: $gutter-one-third;
+
+    @include media(tablet) {
+      float: left;
+      width: $three-quarters;
+    }
+  }
+}
+
+// Images / media
+
 img {
   display: block;
   max-width: 100%;
 }
+
+// Inline typography
 
 strong, b {
   font-weight: bold;
@@ -39,6 +83,8 @@ em, i {
 small {
   @include core-16;
 }
+
+// Preformatted text and code
 
 pre code {
   padding: 0; 
