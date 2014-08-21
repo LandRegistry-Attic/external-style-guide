@@ -1,19 +1,22 @@
 // Callout elements - summaries, alerts, notifications
 // ==========================================================================
 
-
-// Summary - Register View for example
-.summary {
+// Callout - A coloured box
+.callout {
   margin: $gutter 0;
   padding: $gutter;
-  color: $white;
-  background-color: $light-blue;
 
   @extend %contain-floats;
 
-  [class*='heading'] {
+  .first-heading {
     margin-top: 0;
   }
+}
+
+// Summary - Register View for example
+.callout--summary {
+  color: $white;
+  background-color: $light-blue;
 
   .title-flag {
     @include highlight-tag($light-blue, $white);

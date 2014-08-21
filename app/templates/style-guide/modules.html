@@ -25,23 +25,19 @@
 
     <div class="inner-block style-unit">
       <h3>Summary</h3>
-      <p>See _callouts.scss and _typography.scss</p>
+      <p class="text">See _callouts.scss and _typography.scss</p>
 
       <div class="module-example">
-        <pre>
-        {{ include_raw('style-guide/modules/summary.html') | escape }}
-        </pre>
+        {% include "style-guide/modules/summary.html" %}
       </div>
 
-      <!--
       <div class="module-source">
         <pre>
-          <code>
-            {% include "style-guide/modules/summary.html" %}
-          </code>
+<code>
+{{ include_raw('style-guide/modules/summary.html') | escape }}
+</code>
         </pre>
       </div>
-      -->
 
     </div>
 
