@@ -144,6 +144,19 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
         }
       }
+    },
+
+    concat: {
+      options: {
+        separator: "\n", // add new line after each file
+      },
+      dist: {
+        src: [
+          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/bind.js',
+          '<%= globalConfig.govuk_toolkit.js.path %>govuk/selection-buttons.js'
+        ],
+        dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
+      }
     }
 
   });
@@ -169,6 +182,9 @@ module.exports = function(grunt) {
   // Concurrent - allows us to run the server and the watch at the same time: https://github.com/sindresorhus/grunt-concurrent
   grunt.loadNpmTasks('grunt-concurrent');
 
+  // Concat - used to concatenate files, mainly for js
+  grunt.loadNpmTasks('grunt-contrib-concat');
+
   // Register the various Grunt commands:
 
   // 1: Default task - watch for changes in landregistry elements, and serve the app
@@ -183,6 +199,7 @@ module.exports = function(grunt) {
     'copy:govuk_template_img',
     'copy:leaflet_js',
     'cssmin:leaflet_js',
+    'concat'
   ]);
 
   // 3: Update task - copy updates to govuk assets
