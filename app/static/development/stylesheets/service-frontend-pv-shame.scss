@@ -54,3 +54,7 @@
 .optional-section {
     margin-bottom: 0;
 }
+
+.js-enabled .focused {
+  outline: 3px solid $yellow;
+}
