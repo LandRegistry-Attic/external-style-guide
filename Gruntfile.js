@@ -45,8 +45,7 @@ module.exports = function(grunt) {
           '<%= globalConfig.scss.dev %>stylesheets/landregistry-main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry-main.scss',
           '<%= globalConfig.scss.dev %>style-guide-only/style-guide-only.css': '<%= globalConfig.scss.dev %>style-guide-only/style-guide-only.scss',
           '<%= globalConfig.scss.dev %>stylesheets/service-frontend-pv-shame.css': '<%= globalConfig.scss.dev %>stylesheets/service-frontend-pv-shame.scss',
-          '<%= globalConfig.scss.dev %>stylesheets/property-frontend-pv-shame.css': '<%= globalConfig.scss.dev %>stylesheets/property-frontend-pv-shame.scss',
-          '<%= globalConfig.scss.dev %>stylesheets/property-frontend-sr-shame.css': '<%= globalConfig.scss.dev %>stylesheets/property-frontend-sr-shame.scss'
+          '<%= globalConfig.scss.dev %>stylesheets/property-frontend-pv-shame.css': '<%= globalConfig.scss.dev %>stylesheets/property-frontend-pv-shame.scss'
         }
       },
       build: {
@@ -57,8 +56,7 @@ module.exports = function(grunt) {
         files: {
           '<%= globalConfig.build.css %>landregistry-main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry-main.scss',
           '<%= globalConfig.build.css %>service-frontend-pv-shame.css': '<%= globalConfig.scss.dev %>stylesheets/service-frontend-pv-shame.scss',
-          '<%= globalConfig.build.css %>property-frontend-pv-shame.css': '<%= globalConfig.scss.dev %>stylesheets/property-frontend-pv-shame.scss',
-          '<%= globalConfig.build.css %>property-frontend-sr-shame.css': '<%= globalConfig.scss.dev %>stylesheets/property-frontend-sr-shame.scss'
+          '<%= globalConfig.build.css %>property-frontend-pv-shame.css': '<%= globalConfig.scss.dev %>stylesheets/property-frontend-pv-shame.scss'
         }
       }
     },
