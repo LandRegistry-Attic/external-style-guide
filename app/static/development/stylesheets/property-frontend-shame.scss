@@ -1,0 +1,26 @@
+// Property view specifics
+// ==========================================================================
+
+.content-title {
+    color: $grey-1;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.pw-summary {
+    margin-bottom: $gutter;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.adr {
+  margin-bottom: $gutter;
+  padding: $gutter 0;
+  border-bottom: 1px solid $grey-2;
+}
+
+#map {
+    margin-top: $gutter;
+}
