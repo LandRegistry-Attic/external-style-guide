@@ -108,7 +108,7 @@ module.exports = function(grunt) {
       govuk_template_js: {
         files: [{
           expand: true,
-          cwd: '<%= globalConfig.govuk_template.js_dev %>',
+          cwd: '<%= globalConfig.build.js %>',
           src: '**/*.js',
           dest: '<%= globalConfig.build.js %>'
         }]
@@ -167,11 +167,11 @@ module.exports = function(grunt) {
     'copy:govuk_template_css',
     'cssmin:minify',
     'sass:build',
+    'concat',
     'uglify',
     'copy:govuk_template_img',
     'copy:leaflet_js',
-    'cssmin:leaflet_js',
-    'concat'
+    'cssmin:leaflet_js'
   ]);
 
   // 3: Update task - copy updates to govuk assets
