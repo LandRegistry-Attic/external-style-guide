@@ -1588,3 +1588,236 @@ pre code {
   margin-bottom: 30px;
   border-bottom: 1px solid #bfc1c3;
 }
+
+.js-enabled .focused {
+  outline: 3px solid #ffbf47;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+.content-title {
+  color: #6f777b;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.pw-summary {
+  margin-bottom: 30px;
+}
+.pw-summary h1 {
+  margin-bottom: 0;
+}
+
+.adr {
+  margin-bottom: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+#map {
+  margin-top: 30px;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+#content:after, .inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+.change a {
+  color: #ffbf47;
+  text-decoration: none;
+}
+.change a:hover {
+  text-decoration: underline;
+}
+
+.notification {
+  margin: 30px 0;
+  padding: 30px;
+  background-color: #fff2d3;
+}
+.notification [class*="heading-"] {
+  margin: 0;
+}
+form .notification {
+  margin-top: 0;
+}
+
+.notification__highlight {
+  font-weight: bold;
+}
+
+.divider {
+  border-top: 1px solid #bfc1c3;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+
+.optional-section {
+  margin-bottom: 0;
+}
