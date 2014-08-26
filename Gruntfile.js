@@ -156,7 +156,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   // Register the various Grunt commands:
 
-  // 1: Default task - watch for changes in landregistry scss and js
+  // 1: Default task - watch for changes in landregistry scss
   grunt.registerTask('default', ['watch']);
 
   // 2: Build task - copy and min ALL files to static/build/ maintaining the file structure
