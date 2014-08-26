@@ -15,8 +15,10 @@ module.exports = function(grunt) {
       js_dev: 'app/static/development/govuk-template/javascripts/',
       img_dev: 'app/static/development/govuk-template/images/'
     },
-    scss: {
-      dev: 'app/static/development/'
+    development: {
+      scss: 'app/static/development/',
+      css: 'app/static/development/stylesheets/',
+      js: 'app/static/development/javascripts/'
     },
     build: {
       css: 'app/static/build/stylesheets/',
@@ -38,21 +40,21 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-            style: 'expanded',
-            loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
+          style: 'expanded',
+          loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
-          '<%= globalConfig.scss.dev %>stylesheets/landregistry-main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry-main.scss',
-          '<%= globalConfig.scss.dev %>style-guide-only/style-guide-only.css': '<%= globalConfig.scss.dev %>style-guide-only/style-guide-only.scss'
+          '<%= globalConfig.development.scss %>stylesheets/landregistry-main.css': '<%= globalConfig.development.scss %>stylesheets/landregistry-main.scss',
+          '<%= globalConfig.development.scss %>style-guide-only/style-guide-only.css': '<%= globalConfig.development.scss %>style-guide-only/style-guide-only.scss'
         }
       },
       build: {
         options: {
-            style: 'compressed',
-            loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
+          style: 'compressed',
+          loadPath: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets'
         },
         files: {
-          '<%= globalConfig.build.css %>landregistry-main.css': '<%= globalConfig.scss.dev %>stylesheets/landregistry-main.scss'
+          '<%= globalConfig.build.css %>landregistry-main.css': '<%= globalConfig.development.scss %>stylesheets/landregistry-main.scss'
         }
       }
     },
@@ -80,10 +82,10 @@ module.exports = function(grunt) {
         expand: true
       },
       govuk_template_css: {
-        cwd: '<%= globalConfig.govuk_template.css_dev %>', // set working folder / root to copy
-        src: '**/*', // copy all files and subfolders
-        dest: '<%= globalConfig.build.css %>', // destination folder
-        expand: true // required when using cwd
+        cwd: '<%= globalConfig.govuk_template.css_dev %>',
+        src: '**/*',
+        dest: '<%= globalConfig.build.css %>',
+        expand: true
       },
       govuk_template_img: {
         cwd: '<%= globalConfig.govuk_template.img_dev %>',
@@ -99,12 +101,20 @@ module.exports = function(grunt) {
       }
     },
 
+    concat: {
+      options: {
+        separator: "\n", // add new line after each file
+      },
+      dist: {
+        src: [
+          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/bind.js',
+          '<%= globalConfig.govuk_toolkit.js.path %>govuk/selection-buttons.js'
+        ],
+        dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
+      }
+    },
+
     uglify: {
-
-      /*options: {
-        mangle: false
-      },*/
-
       govuk_template_js: {
         files: [{
           expand: true,
@@ -117,24 +127,11 @@ module.exports = function(grunt) {
 
     watch: {
       css: {
-        files: ['<%= globalConfig.scss.dev %>**/*.scss'],
+        files: ['<%= globalConfig.development.scss %>**/*.scss'],
         tasks: ['sass:dev'],
         options: {
           spawn: false,
         }
-      }
-    },
-
-    concat: {
-      options: {
-        separator: "\n", // add new line after each file
-      },
-      dist: {
-        src: [
-          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/bind.js',
-          '<%= globalConfig.govuk_toolkit.js.path %>govuk/selection-buttons.js'
-        ],
-        dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
       }
     }
 
@@ -159,7 +156,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   // Register the various Grunt commands:
 
-  // 1: Default task - watch for changes in landregistry elements, and serve the app
+  // 1: Default task - watch for changes in landregistry scss and js
   grunt.registerTask('default', ['watch']);
 
   // 2: Build task - copy and min ALL files to static/build/ maintaining the file structure
