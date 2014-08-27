@@ -53,7 +53,6 @@ h4, h5, h6 {
   }
 
   dd {
-    font-weight: bold;
     margin-bottom: $gutter-one-third;
 
     @include media(tablet) {
