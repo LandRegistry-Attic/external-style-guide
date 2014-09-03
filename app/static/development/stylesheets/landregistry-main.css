@@ -1689,7 +1689,7 @@ pre code {
 .callout--summary .title-plan {
   border: 2px solid white;
 }
-.callout--summary .inline dd {
+.callout--summary .definition-tabular dd {
   font-weight: bold;
 }
 
