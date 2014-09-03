@@ -12,14 +12,17 @@
       <div class="text">
 
         <h1>Modules</h1>
-        <p class="lede">Modules (ui elements) are...</p>
+        <ul class="list-bullet">
+          <li><a href="#callouts">Callouts</a></li>
+          <li><a href="#search-results">Search results</a></li>
+        </ul>
 
       </div>
 
     </div>
 
     <div class="inner-block style-section">
-      <h2>Callouts</h2>
+      <h2 id="callouts">Callouts</h2>
       <p>Summaries, alerts, notifications</p>
     </div>
 
@@ -41,8 +44,45 @@
 
     </div>
 
+    <div class="inner-block style-unit">
+      <h3>Notice</h3>
+      <p class="text">See _callouts.scss</p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/notice.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/notice.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Action notice</h3>
+      <p class="text">See _callouts.scss</p>
+      <p class="text">Used when a process ends in an action to be taken. In this example generating a token that then needs to be passed on to someone else.</p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/action-notice.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/action-notice.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
     <div class="inner-block style-section">
-      <h2>Search results</h2>
+      <h2 id="search-results">Search results</h2>
       <p>Search listings (list properties, details and image)</p>
     </div>
 

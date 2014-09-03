@@ -16,10 +16,10 @@
 // Summary - Register View for example
 .callout--summary {
   color: $white;
-  background-color: $light-blue;
+  background-color: $govuk-blue;
 
   .title-flag {
-    @include highlight-tag($light-blue, $white);
+    @include highlight-tag($govuk-blue, $white);
   }
 
   .lede {
@@ -39,4 +39,28 @@
     font-weight: bold;
   }
 
+}
+
+// Yellow "basecamp" alert
+.callout--notice {
+  background-color: $yellow-25;
+}
+
+// When an action is generated - ie "now do this".
+// For example see http://prototypes.landregistryconcept.co.uk/relationship-starts/conveyancer-token
+.callout--action-notice {
+  color: $black;
+  background-color: $turquoise;
+
+  .title-flag {
+    @include highlight-tag($white, $black);
+  }
+}
+
+// pairs with the above example
+.callout--generated-token {
+  h1 {
+    margin: 0; 
+  }
+  text-align: center;
 }

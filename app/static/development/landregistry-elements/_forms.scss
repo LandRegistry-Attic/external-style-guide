@@ -4,3 +4,22 @@
 .js-enabled .focused {
   outline: 3px solid $yellow;
 }
+
+// narrower field for simple numeric input
+.field-numeric {
+  width: 6em;
+}
+
+// a half width form element
+.form-control-1-2 {
+  width: 25%;
+}
+
+// a secondary button
+.button-secondary {
+  @include button($grey-3);
+  @include core-16;
+  margin: 0 $gutter-half $gutter-half 0;
+  padding: em(10) em(15) em(5) em(15);
+  vertical-align: top;
+}

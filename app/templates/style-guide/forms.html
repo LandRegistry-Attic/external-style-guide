@@ -17,9 +17,30 @@
           <p class="lede">intro about forms</p>
         </div>
 
-    </div>
-  </div>
+      </div>
 
+      <form action="/" method="post" class="form">
+
+        <div class="form-group">
+          <label class="form-label" for="example-1">.field-numeric</label>
+          <p class="form-hint">A narrower field for simple numeric input</p>
+          <input type="number" class="form-control field-numeric" id="example-1" name="example-1">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="example-1">.form-control-1-2</label>
+          <p class="form-hint">A "half width" field</p>
+          <input type="number" class="form-control form-control-1-2" id="example-1" name="example-1">
+        </div>
+
+        <div class="form-group">
+          <p>.button-secondary</p>
+          <input type="submit" class="button-secondary" value="Edit">
+        </div>
+
+    </div>
+
+  </div>
 </main>
 
 {% endblock %}
