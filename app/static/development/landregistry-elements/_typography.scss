@@ -33,9 +33,9 @@ h4, h5, h6 {
 //dd {
 //}
 
-// An inline definition list - name:value pairs for example
+// A tabular definition list - name:value pairs for example
 
-/* dd */.inline {
+/* dd */.definition-tabular {
   @extend %contain-floats;
 
   dt {
@@ -62,6 +62,23 @@ h4, h5, h6 {
   }
 }
 
+// An inline definition list - name:value pairs for example
+
+/* dd */.definition-inline {
+  @extend %contain-floats;
+  dt {
+    clear: left;
+    float: left;
+    margin-right: 0.2em;
+    &:after {
+      content: ':';
+    }
+  }
+  dd {
+    float: left;
+  }
+}
+
 // Images / media
 
 img {
@@ -81,6 +98,22 @@ em, i {
 
 small {
   @include core-16;
+}
+
+del {
+  text-decoration: none;
+  background-color: $mellow-red-25;
+}
+
+ins {
+  text-decoration: none;
+  background-color: $grass-green-25;
+}
+
+// Footnotes
+.footnote {
+  @include core-16;
+  color: $grey-1;
 }
 
 // Preformatted text and code
