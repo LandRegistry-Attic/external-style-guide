@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python ./app/server.py
+APP_ROOT=`pwd` bash ./run_dev.sh
