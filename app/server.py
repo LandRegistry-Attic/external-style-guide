@@ -51,6 +51,10 @@ def forms():
 def modules():
   return render_template('style-guide/modules.html')
 
+@app.route('/navigation')
+def navigation():
+  return render_template('style-guide/navigation.html')
+
 @app.route('/todo')
 def todo():
   return render_template('style-guide/todo.html')

@@ -1,0 +1,52 @@
+{% extends "style-guide/styleguide_base.html" %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+    
+    {% include "style-guide/includes/alpha_banner.html" %}
+    
+    <div class="inner-block">
+
+      <div class="text">
+
+        <h1>Navigation</h1>
+        <ul class="list-bullet">
+          <li><a href="#subnav">Subnavigation</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="inner-block style-section">
+      <h2 id="callouts">Subnavigation</h2>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Summary</h3>
+      <div class="text">
+        <p>Currently used in register view, a GOV.UK-esque side navigation.</p>
+        <p>See _callouts.scss and _typography.scss</p>
+      </div>
+
+      <div class="module-example">
+        {% include "style-guide/modules/subnav.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/subnav.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
