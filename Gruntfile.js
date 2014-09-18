@@ -166,7 +166,7 @@ module.exports = function(grunt) {
     'cssmin:minify',
     'sass:build',
     'concat',
-    //'uglify',
+    'uglify',
     'copy:govuk_template_img',
     'copy:leaflet_js',
     'cssmin:leaflet_js'
