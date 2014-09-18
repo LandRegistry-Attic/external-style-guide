@@ -10,7 +10,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+#content:after, .definition-tabular:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -42,7 +42,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+#content:after, .definition-tabular:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -60,7 +60,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+#content:after, .definition-tabular:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -72,7 +72,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-inline:after, .callout:after, .callout--summary .lede:after, .result:after {
+#content:after, .definition-tabular:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after {
   content: "";
   display: block;
   clear: both;
@@ -1525,6 +1525,50 @@ ol li {
   float: left;
 }
 
+/*
+// Deed relationship definition lists - i.e. "lessors" followed by "lessees"
+
+<div class="deed-relationship">
+  <dl>
+    <dt>Between</dt>
+    <dd>Helen Cassidy</dd>
+    <dd>Jerome Hall</dd>
+  </dl>
+  <dl>
+    <dt>and</dt>
+    <dd>Clara Teoh</dd>
+  </dl>
+</div>
+
+*/
+.deed-relationship {
+  margin-bottom: 1em;
+}
+.deed-relationship dt {
+  font-style: italic;
+  padding-bottom: 0.25em;
+}
+.deed-relationship dd {
+  padding-bottom: 0.25em;
+}
+@media (min-width: 641px) {
+  .deed-relationship dl {
+    float: left;
+    width: 50%;
+  }
+  .deed-relationship dt {
+    float: left;
+    width: 30%;
+  }
+  .deed-relationship dd {
+    float: left;
+    width: 70%;
+  }
+  .deed-relationship dd:not(:first-of-type) {
+    margin-left: 30%;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1560,6 +1604,10 @@ del {
 ins {
   text-decoration: none;
   background-color: #e7ebda;
+}
+
+abbr {
+  border-bottom: 1px dotted;
 }
 
 .footnote {
@@ -1832,6 +1880,36 @@ pre code {
 .collapse {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.collapse-top {
+  margin-top: 0;
+}
+
+.collapse-bottom {
+  margin-bottom: 0;
+}
+
+nav ol, nav ul {
+  list-style-type: none;
+}
+
+.page-contents {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  .page-contents {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+.page-contents li:before {
+  content: '-';
+  margin-right: 15px;
 }
 
 .content-title {

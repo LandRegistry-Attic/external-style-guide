@@ -79,6 +79,54 @@ h4, h5, h6 {
   }
 }
 
+/*
+// Deed relationship definition lists - i.e. "lessors" followed by "lessees"
+
+<div class="deed-relationship">
+  <dl>
+    <dt>Between</dt>
+    <dd>Helen Cassidy</dd>
+    <dd>Jerome Hall</dd>
+  </dl>
+  <dl>
+    <dt>and</dt>
+    <dd>Clara Teoh</dd>
+  </dl>
+</div>
+
+*/
+
+.deed-relationship {
+  @extend %contain-floats;
+  margin-bottom: 1em;
+  
+  dt {
+    font-style: italic;
+    padding-bottom: 0.25em;
+  }
+  dd {
+    padding-bottom: 0.25em;
+  }
+
+  @include media(tablet) {
+    dl {
+      float: left;
+      width: $half;
+    }
+    dt {
+      float: left;
+      width: 30%;
+    }
+    dd {
+      float: left;
+      width: 70%;
+      &:not(:first-of-type) {
+        margin-left: 30%;
+      }
+    }
+  }
+}
+
 // Images / media
 
 img {
@@ -108,6 +156,10 @@ del {
 ins {
   text-decoration: none;
   background-color: $grass-green-25;
+}
+
+abbr {
+  border-bottom: 1px dotted;
 }
 
 // Footnotes
