@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/bind.js',
+          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/*',
           '<%= globalConfig.govuk_toolkit.js.path %>govuk/*',
           '<%= globalConfig.govuk_toolkit.js.path %>document-ready.js'
         ],
