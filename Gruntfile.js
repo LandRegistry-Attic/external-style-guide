@@ -107,9 +107,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/bind.js',
-          '<%= globalConfig.govuk_toolkit.js.path %>govuk/selection-buttons.js',
-          '<%= globalConfig.govuk_toolkit.js.path %>landregistry/*.js'
+          '<%= globalConfig.development.js %>vendor/polyfills/bind.js',
+          '<%= globalConfig.development.js %>govuk/selection-buttons.js',
+          '<%= globalConfig.development.js %>landregistry/*.js'
         ],
         dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
       }
@@ -166,7 +166,7 @@ module.exports = function(grunt) {
     'cssmin:minify',
     'sass:build',
     'concat',
-    'uglify',
+    //'uglify',
     'copy:govuk_template_img',
     'copy:leaflet_js',
     'cssmin:leaflet_js'
