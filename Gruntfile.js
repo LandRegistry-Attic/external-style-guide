@@ -37,6 +37,10 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    jshint: {
+      all: ['Gruntfile.js', '<%= globalConfig.development.js %>govuk/*.js']
+    },
+
     sass: {
       dev: {
         options: {
@@ -107,9 +111,11 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          '<%= globalConfig.development.js %>vendor/polyfills/bind.js',
-          '<%= globalConfig.development.js %>govuk/selection-buttons.js',
-          '<%= globalConfig.development.js %>landregistry/*.js'
+          '<%= globalConfig.development.js %>vendor/polyfills/*',
+          '<%= globalConfig.development.js %>vendor/*',
+          '<%= globalConfig.development.js %>govuk/*',
+          '<%= globalConfig.development.js %>landregistry/*',
+          '<%= globalConfig.development.js %>document-ready.js'
         ],
         dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
       }
@@ -155,6 +161,11 @@ module.exports = function(grunt) {
 
   // Concat - used to concatenate files, mainly for js
   grunt.loadNpmTasks('grunt-contrib-concat');
+
+  // js hint task: https://github.com/gruntjs/grunt-contrib-jshint
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+
   // Register the various Grunt commands:
 
   // 1: Default task - watch for changes in landregistry scss

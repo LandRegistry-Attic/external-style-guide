@@ -15,6 +15,7 @@
         <ul class="list-bullet">
           <li><a href="#callouts">Callouts</a></li>
           <li><a href="#search-results">Search results</a></li>
+          <li><a href="#details">&lt;details&gt; (demonstrating polyfill)</a></li>
         </ul>
 
       </div>
@@ -98,6 +99,29 @@
         <pre>
 <code>
 {{ include_raw('style-guide/modules/search-results.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
+    <div class="inner-block style-section">
+      <h2 id="details">&lt;details&gt;</h2>
+      <p>Generally used for expanding "help" text.</p>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Summary</h3>
+      <p class="text">See /app/static/development/javascripts/vendor/polyfills/details-omnifill.js</p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/details.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/details.html') | escape }}
 </code>
         </pre>
       </div>

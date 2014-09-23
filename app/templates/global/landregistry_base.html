@@ -12,3 +12,20 @@
 {% block cookie_message %}
   <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
 {% endblock %}
+
+
+{% block body_end %}
+  {% if env_flag == 'build' %}
+    <script src="{{ landregistry_asset_path }}javascripts/land-registry-scripts.js"></script>
+  {% else %}
+    <script src="{{ landregistry_asset_path }}javascripts/vendor/jquery-1.11.1.min.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/vendor/polyfills/bind.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/vendor/polyfills/details-omnifill.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/govuk/selection-buttons.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/govuk/stick-at-top-when-scrolling.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/govuk/stop-scrolling-at-footer.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/document-ready.js"></script>
+  {% endif %}
+
+  {% block js_additionals %}{% endblock %}
+{% endblock %}
