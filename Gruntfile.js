@@ -37,6 +37,10 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
+    jshint: {
+      all: ['Gruntfile.js', '<%= globalConfig.development.js %>govuk/*.js']
+    },
+
     sass: {
       dev: {
         options: {
@@ -155,6 +159,11 @@ module.exports = function(grunt) {
 
   // Concat - used to concatenate files, mainly for js
   grunt.loadNpmTasks('grunt-contrib-concat');
+
+  // js hint task: https://github.com/gruntjs/grunt-contrib-jshint
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
+
   // Register the various Grunt commands:
 
   // 1: Default task - watch for changes in landregistry scss
