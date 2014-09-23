@@ -114,6 +114,7 @@ module.exports = function(grunt) {
           '<%= globalConfig.development.js %>vendor/polyfills/*',
           '<%= globalConfig.development.js %>vendor/*',
           '<%= globalConfig.development.js %>govuk/*',
+          '<%= globalConfig.development.js %>landregistry/*',
           '<%= globalConfig.development.js %>document-ready.js'
         ],
         dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
