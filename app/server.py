@@ -13,7 +13,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-t', '--testbuild', action='store_true')
 args = parser.parse_args()
 
-app.config['TESTBUILD'] = args.testbuild
+#app.config['TESTBUILD'] = args.testbuild
+app.config['TESTBUILD'] = False
 
 # govuk_template asset path
 @app.context_processor
