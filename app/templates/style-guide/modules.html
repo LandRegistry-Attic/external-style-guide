@@ -16,6 +16,7 @@
           <li><a href="#callouts">Callouts</a></li>
           <li><a href="#search-results">Search results</a></li>
           <li><a href="#details">&lt;details&gt; (demonstrating polyfill)</a></li>
+          <li><a href="#faux-details">"Faux details"</a></li>
         </ul>
 
       </div>
@@ -122,6 +123,29 @@
         <pre>
 <code>
 {{ include_raw('style-guide/modules/details.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
+    <div class="inner-block style-section">
+      <h2 id="faux-details">"Faux details"</h2>
+      <p>Collapsible sections</p>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Summary</h3>
+      <p class="text">See </p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/faux-details.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/faux-details.html') | escape }}
 </code>
         </pre>
       </div>

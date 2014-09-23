@@ -1653,6 +1653,48 @@ nav ol, nav ul {
   margin-right: 15px;
 }
 
+.js-enabled .js-faux-details > :first-child {
+  cursor: pointer;
+  position: relative;
+  margin-top: 0;
+  padding-left: 0.8em;
+}
+.js-enabled .js-faux-details > :first-child:hover {
+  color: #2e8aca;
+}
+.js-enabled .js-faux-details > :first-child:focus {
+  outline: 3px solid #ffbf47;
+}
+.js-enabled .js-faux-details > :first-child:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  border-top: 0.3464em solid transparent;
+  border-right: 0.4 solid transparent;
+  border-bottom: 0.3464em solid transparent;
+  border-left: 0.4em solid #0b0c0c;
+}
+.js-enabled .js-faux-details-wrapper {
+  display: none;
+  margin-bottom: 1.31579em;
+}
+@media (min-width: 641px) {
+  .js-enabled .js-faux-details-wrapper {
+    margin-bottom: 2.36842em;
+  }
+}
+.js-enabled .js-faux-details--open > :first-child:before {
+  top: 0.35em;
+  border-top: 0.4em solid #0b0c0c;
+  border-right: 0.3464em solid transparent;
+  border-bottom: 0.4em solid transparent;
+  border-left: 0.3464em solid transparent;
+}
+.js-enabled .js-faux-details--open .js-faux-details-wrapper {
+  display: block;
+}
+
 .content-title {
   color: #6f777b;
   font-weight: 400;
