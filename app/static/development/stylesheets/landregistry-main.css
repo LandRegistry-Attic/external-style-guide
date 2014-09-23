@@ -1631,6 +1631,24 @@ pre code {
   margin-bottom: 0;
 }
 
+.legal-division--top {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 4px solid #2b8cc4;
+}
+
+.legal-division--bottom {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #2b8cc4;
+}
+
+.action-division--top {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #dee0e2;
+}
+
 nav ol, nav ul {
   list-style-type: none;
 }
