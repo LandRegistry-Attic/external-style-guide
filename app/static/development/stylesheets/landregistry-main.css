@@ -1670,9 +1670,9 @@ nav ol, nav ul {
   position: absolute;
   left: 0;
   top: 0.2em;
-  border-top: 0.3464em solid transparent;
+  border-top: 0.3464em dotted transparent;
   border-right: 0.4 solid transparent;
-  border-bottom: 0.3464em solid transparent;
+  border-bottom: 0.3464em dotted transparent;
   border-left: 0.4em solid #0b0c0c;
 }
 .js-enabled .js-faux-details-wrapper {
@@ -1687,9 +1687,9 @@ nav ol, nav ul {
 .js-enabled .js-faux-details--open > :first-child:before {
   top: 0.35em;
   border-top: 0.4em solid #0b0c0c;
-  border-right: 0.3464em solid transparent;
+  border-right: 0.3464em dotted transparent;
   border-bottom: 0.4em solid transparent;
-  border-left: 0.3464em solid transparent;
+  border-left: 0.3464em dotted transparent;
 }
 .js-enabled .js-faux-details--open .js-faux-details-wrapper {
   display: block;
