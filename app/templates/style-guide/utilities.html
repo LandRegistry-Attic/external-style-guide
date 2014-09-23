@@ -1,0 +1,41 @@
+{% extends "style-guide/styleguide_base.html" %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+    
+    {% include "style-guide/includes/alpha_banner.html" %}
+    
+    <div class="inner-block">
+
+      <div class="text">
+
+        <h1>Navigation</h1>
+        <ul class="list-bullet">
+          <li><a href="#legal-top">Legal divider top</a></li>
+          <li><a href="#legal-top">Legal divider bottom</a></li>
+          <li><a href="#legal-top">Action divider top</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="inner-block style-unit">
+      <div class="legal-division--top">
+        <p>.legal-division--top</p>
+      </div>
+      <div class="legal-division--bottom">
+        <p>.legal-division--top</p>
+      </div>
+      <div class="action-division--top">
+        <p>.action-division--top</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

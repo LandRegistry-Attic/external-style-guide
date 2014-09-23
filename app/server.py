@@ -56,6 +56,10 @@ def modules():
 def navigation():
   return render_template('style-guide/navigation.html')
 
+@app.route('/utilities')
+def utilities():
+  return render_template('style-guide/utilities.html')
+
 @app.route('/todo')
 def todo():
   return render_template('style-guide/todo.html')
