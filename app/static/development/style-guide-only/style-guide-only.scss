@@ -20,6 +20,27 @@
   border-top: 1px solid #ccc;
 }
 
+.module-example {
+  @extend %contain-floats;
+  border: 4px solid #ccc;
+  margin-bottom: 30px;
+  padding: 30px;
+
+  position: relative;
+
+  &:before {
+    content: 'example';
+
+    @include core-16;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 4px 4px 0;
+    background: #ccc;
+  }
+}
+
 pre {
   margin: 30px 0; 
 }

@@ -10,6 +10,12 @@
 @-o-viewport {
   width: device-width;
 }
+.module-example:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 @font-face {
   font-family: GDS-Logo;
   src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
@@ -36,6 +42,12 @@
 @-o-viewport {
   width: device-width;
 }
+.module-example:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -48,12 +60,24 @@
 @-o-viewport {
   width: device-width;
 }
+.module-example:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 @-ms-viewport {
   width: device-width;
 }
 @-o-viewport {
   width: device-width;
 }
+.module-example:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -63,6 +87,32 @@
 .example {
   padding: 30px 0;
   border-top: 1px solid #ccc;
+}
+
+.module-example {
+  border: 4px solid #ccc;
+  margin-bottom: 30px;
+  padding: 30px;
+  position: relative;
+}
+.module-example:before {
+  content: 'example';
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 4px 4px 0;
+  background: #ccc;
+}
+@media (max-width: 640px) {
+  .module-example:before {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
 }
 
 pre {
