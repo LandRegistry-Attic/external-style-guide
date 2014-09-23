@@ -112,6 +112,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           '<%= globalConfig.development.js %>vendor/polyfills/*',
+          '<%= globalConfig.development.js %>vendor/*',
           '<%= globalConfig.development.js %>govuk/*',
           '<%= globalConfig.development.js %>document-ready.js'
         ],
