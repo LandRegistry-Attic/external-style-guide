@@ -12,3 +12,15 @@
 {% block cookie_message %}
   <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
 {% endblock %}
+
+
+{% block body_end %}
+  {% if env_flag == True %}
+    <script src="{{ landregistry_asset_path }}javascripts/land-registry-scripts.js"></script>
+  {% else %}
+    <script src="{{ landregistry_asset_path }}javascripts/vendor/polyfills/bind.js"></script>
+    <script src="{{ landregistry_asset_path }}javascripts/vendor/polyfills/details-omnifill.js"></script>
+  {% endif %}
+
+  {% block js_additionals %}{% endblock %}
+{% endblock %}
