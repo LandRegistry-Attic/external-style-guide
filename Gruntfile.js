@@ -107,9 +107,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          '<%= globalConfig.govuk_toolkit.js.path %>vendor/polyfills/*',
-          '<%= globalConfig.govuk_toolkit.js.path %>govuk/*',
-          '<%= globalConfig.govuk_toolkit.js.path %>document-ready.js'
+          '<%= globalConfig.development.js %>vendor/polyfills/*',
+          '<%= globalConfig.development.js %>govuk/*',
+          '<%= globalConfig.development.js %>document-ready.js'
         ],
         dest: '<%= globalConfig.build.js %>land-registry-scripts.js'
       }
