@@ -1974,7 +1974,7 @@ nav ol, nav ul {
   line-height: 1.25;
   font-weight: 300;
   text-transform: none;
-  background-image: image-url("separator.png");
+  background-image: image-url("/static/build/images/separator.png");
   background-position: 100% 50%;
   background-repeat: no-repeat;
   float: left;
@@ -1992,7 +1992,7 @@ nav ol, nav ul {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #global-breadcrumb ol li {
-    background-image: image-url("separator-2x.png");
+    background-image: image-url("/static/build/images/separator-2x.png");
     background-size: 6px 11px;
   }
 }
