@@ -23,3 +23,10 @@
   padding: em(10) em(15) em(5) em(15);
   vertical-align: top;
 }
+
+// error styles
+.errors {
+  padding-left: $gutter-half;
+  border-left: 3px solid $red;
+  color: $red;
+}
