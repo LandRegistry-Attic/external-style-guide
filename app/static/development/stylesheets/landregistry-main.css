@@ -1860,7 +1860,7 @@ nav ol, nav ul {
   text-indent: -5000px;
   color: white;
   background-color: #005ea5;
-  background-image: url("/static/images/search-button.png");
+  background-image: url("/static/build/images/search-button.png");
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
