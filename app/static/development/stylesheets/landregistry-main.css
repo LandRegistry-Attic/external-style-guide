@@ -1619,6 +1619,8 @@ pre code {
 }
 
 .errors {
+  clear: both;
+  margin-bottom: 15px;
   padding-left: 15px;
   border-left: 3px solid #b10e1e;
   color: #b10e1e;
