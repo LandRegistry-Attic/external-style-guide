@@ -18,7 +18,8 @@ module.exports = function(grunt) {
     development: {
       scss: 'app/static/development/',
       css: 'app/static/development/stylesheets/',
-      js: 'app/static/development/javascripts/'
+      js: 'app/static/development/javascripts/',
+      img: 'app/static/development/images/'
     },
     build: {
       css: 'app/static/build/stylesheets/',
@@ -93,6 +94,12 @@ module.exports = function(grunt) {
       },
       govuk_template_img: {
         cwd: '<%= globalConfig.govuk_template.img_dev %>',
+        src: '**/*',
+        dest: '<%= globalConfig.build.img %>',
+        expand: true
+      },
+      images: {
+        cwd: '<%= globalConfig.development.img %>',
         src: '**/*',
         dest: '<%= globalConfig.build.img %>',
         expand: true
@@ -179,6 +186,7 @@ module.exports = function(grunt) {
     'concat',
     'uglify',
     'copy:govuk_template_img',
+    'copy:images',
     'copy:leaflet_js',
     'cssmin:leaflet_js'
   ]);
