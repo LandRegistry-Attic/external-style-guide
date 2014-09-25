@@ -1517,7 +1517,22 @@ pre code {
 .result {
   padding-bottom: 15px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #bfc1c3;
+  border-bottom: 1px solid #dee0e2;
+}
+.result .heading-medium, .result h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+@media (min-width: 641px) {
+  .result .heading-medium, .result h3 {
+    margin-bottom: 0.125em;
+  }
+}
+.result a {
+  text-decoration: none;
+}
+.result a:hover {
+  text-decoration: underline;
 }
 
 .js-enabled .focused {

@@ -4,7 +4,24 @@
 .result {
     padding-bottom: $gutter-half;
     margin-bottom: $gutter;
-    border-bottom: 1px solid $grey-2;
+    border-bottom: 1px solid $grey-3;
     
     @extend %contain-floats;
+
+    .heading-medium {
+      margin-top:0;
+      margin-bottom: em(10, 20);
+
+      @include media(tablet) {
+        margin-bottom: em(3, 24);
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 }
