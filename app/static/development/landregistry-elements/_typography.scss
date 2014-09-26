@@ -20,6 +20,19 @@ h4, h5, h6 {
   @extend .heading-small;
 }
 
+// Prefixes
+.heading-prefix {
+  @include core-27;
+
+  display: block;
+  color: $grey-1;
+
+  & + h1,
+  & + h2{
+    margin-top: 0;
+  }
+}
+
 // List elements
 
 //ul {

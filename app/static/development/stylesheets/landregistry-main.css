@@ -1231,6 +1231,25 @@ ol li {
   margin-bottom: 0;
 }
 
+.heading-prefix {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  color: #6f777b;
+}
+@media (max-width: 640px) {
+  .heading-prefix {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+}
+.heading-prefix + h1, .heading-prefix + h2 {
+  margin-top: 0;
+}
+
 /* dd */
 @media (min-width: 641px) {
   .definition-tabular dt {
