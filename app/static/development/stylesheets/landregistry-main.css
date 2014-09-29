@@ -1660,6 +1660,27 @@ pre code {
   color: #b10e1e;
 }
 
+.has-error {
+  border-left: 3px solid #df3034;
+  padding-left: 10px;
+  margin-left: -13px;
+}
+.has-error .form-control {
+  border-color: #df3034;
+}
+@media (min-width: 641px) {
+  .has-error {
+    padding-left: 14px;
+    margin-left: -18px;
+    padding-left: 15px;
+  }
+}
+
+.error-block {
+  display: block;
+  color: #df3034;
+}
+
 .collapse {
   margin-top: 0;
   margin-bottom: 0;
