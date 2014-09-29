@@ -32,3 +32,24 @@
   border-left: 3px solid $red;
   color: $red;
 }
+
+.has-error {
+  border-left: 3px solid $error-colour;
+  padding-left: 10px;
+  margin-left: -13px;
+
+  .form-control {
+    border-color: $error-colour;
+  }
+
+  @include media(tablet) {
+    padding-left: 14px;
+    margin-left: -18px;
+    padding-left: $gutter-half;
+  }
+}
+
+.error-block {
+  display: block;
+  color: $error-colour;
+}
