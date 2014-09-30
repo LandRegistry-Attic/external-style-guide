@@ -134,7 +134,8 @@
             <dd><code>dt</code> terms may stand on their own without an accompanying <code>dd</code>, but in that case they share descriptions with the next available <code>dt</code>. You may not have a <code>dd</code> without a parent <code>dt</code>.</dd>
           </dl>
 
-          <h3>‘tabular’ list display - name:value pairs for example</h3>
+          <h3>‘tabular’ list display - name:value pairs for example. This is .definition-tabular</h3>
+          <p>There are some variants to this pattern, see the next few examples. All based on <code>@mixin dl-tabular($col1: $one-quarter, $col2: $three-quarters)</code></p>
 
           <dl class="definition-tabular">
             <dt>This is a name</dt>
@@ -143,6 +144,30 @@
             <dt>This is a name</dt>
             <dd>This is a value</dd>
             
+            <dt>This is a name</dt>
+            <dd>This is a value</dd>
+          </dl>
+
+          <h4>.definition-tabular--b</h4>
+          <dl class="definition-tabular--b">
+            <dt>This is a name</dt>
+            <dd>This is a value</dd>
+          </dl>
+
+          <h4>.definition-tabular--1-3</h4>
+          <dl class="definition-tabular--1-3">
+            <dt>This is a name</dt>
+            <dd>This is a value</dd>
+            
+            <dt>This is a name</dt>
+            <dd>This is a value</dd>
+            
+            <dt>This is a name</dt>
+            <dd>This is a value</dd>
+          </dl>
+
+          <h4>.definition-tabular--1-3--b</h4>
+          <dl class="definition-tabular--1-3--b">
             <dt>This is a name</dt>
             <dd>This is a value</dd>
           </dl>
