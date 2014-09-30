@@ -80,7 +80,7 @@ h4, h5, h6 {
   @include dl-tabular;
 }
 
-/* dl */.definition-tabular--hi-viz {
+/* dl */.definition-tabular--b {
   @extend .definition-tabular;
 
   dd {
@@ -92,7 +92,7 @@ h4, h5, h6 {
   @include dl-tabular($col1: $one-third, $col2: $two-thirds);
 }
 
-/* dl */.definition-tabular--1-3--hi-viz {
+/* dl */.definition-tabular--1-3--b {
   @extend .definition-tabular--1-3;
 
   dd {

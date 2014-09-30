@@ -10,7 +10,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-tabular--hi-viz:after, .definition-tabular--1-3:after, .definition-tabular--1-3--hi-viz:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
+#content:after, .definition-tabular:after, .definition-tabular--b:after, .definition-tabular--1-3:after, .definition-tabular--1-3--b:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
   content: "";
   display: block;
   clear: both;
@@ -42,7 +42,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-tabular--hi-viz:after, .definition-tabular--1-3:after, .definition-tabular--1-3--hi-viz:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
+#content:after, .definition-tabular:after, .definition-tabular--b:after, .definition-tabular--1-3:after, .definition-tabular--1-3--b:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
   content: "";
   display: block;
   clear: both;
@@ -60,7 +60,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-tabular--hi-viz:after, .definition-tabular--1-3:after, .definition-tabular--1-3--hi-viz:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
+#content:after, .definition-tabular:after, .definition-tabular--b:after, .definition-tabular--1-3:after, .definition-tabular--1-3--b:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
   content: "";
   display: block;
   clear: both;
@@ -72,7 +72,7 @@
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-tabular--hi-viz:after, .definition-tabular--1-3:after, .definition-tabular--1-3--hi-viz:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
+#content:after, .definition-tabular:after, .definition-tabular--b:after, .definition-tabular--1-3:after, .definition-tabular--1-3--b:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
   content: "";
   display: block;
   clear: both;
@@ -1252,55 +1252,55 @@ ol li {
 
 /* dl */
 @media (min-width: 641px) {
-  .definition-tabular dt, .definition-tabular--hi-viz dt {
+  .definition-tabular dt, .definition-tabular--b dt {
     float: left;
     clear: left;
     width: 25%;
     margin-bottom: 10px;
   }
 }
-.definition-tabular dt:after, .definition-tabular--hi-viz dt:after {
+.definition-tabular dt:after, .definition-tabular--b dt:after {
   content: ':';
 }
-.definition-tabular dd, .definition-tabular--hi-viz dd {
+.definition-tabular dd, .definition-tabular--b dd {
   margin-bottom: 10px;
 }
 @media (min-width: 641px) {
-  .definition-tabular dd, .definition-tabular--hi-viz dd {
+  .definition-tabular dd, .definition-tabular--b dd {
     float: left;
     width: 75%;
   }
 }
 
 /* dl */
-.definition-tabular--hi-viz dd {
+.definition-tabular--b dd {
   font-weight: bold;
 }
 
 /* dl */
 @media (min-width: 641px) {
-  .definition-tabular--1-3 dt, .definition-tabular--1-3--hi-viz dt {
+  .definition-tabular--1-3 dt, .definition-tabular--1-3--b dt {
     float: left;
     clear: left;
     width: 33.33333%;
     margin-bottom: 10px;
   }
 }
-.definition-tabular--1-3 dt:after, .definition-tabular--1-3--hi-viz dt:after {
+.definition-tabular--1-3 dt:after, .definition-tabular--1-3--b dt:after {
   content: ':';
 }
-.definition-tabular--1-3 dd, .definition-tabular--1-3--hi-viz dd {
+.definition-tabular--1-3 dd, .definition-tabular--1-3--b dd {
   margin-bottom: 10px;
 }
 @media (min-width: 641px) {
-  .definition-tabular--1-3 dd, .definition-tabular--1-3--hi-viz dd {
+  .definition-tabular--1-3 dd, .definition-tabular--1-3--b dd {
     float: left;
     width: 66.66667%;
   }
 }
 
 /* dl */
-.definition-tabular--1-3--hi-viz dd {
+.definition-tabular--1-3--b dd {
   font-weight: bold;
 }
 
@@ -1811,7 +1811,7 @@ nav ol, nav ul {
 @-o-viewport {
   width: device-width;
 }
-#content:after, .definition-tabular:after, .definition-tabular--hi-viz:after, .definition-tabular--1-3:after, .definition-tabular--1-3--hi-viz:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
+#content:after, .definition-tabular:after, .definition-tabular--b:after, .definition-tabular--1-3:after, .definition-tabular--1-3--b:after, .definition-inline:after, .deed-relationship:after, .callout:after, .callout--summary .lede:after, .result:after, #global-header .header-wrapper .header-global .site-search:after, #global-header form#search .content:after, #footer .footer-categories:after {
   content: "";
   display: block;
   clear: both;
