@@ -32,6 +32,18 @@
 
         <h2>Errors</h2>
 
+        <div class="module-example">
+          {% include "style-guide/modules/form-input-errors.html" %}
+        </div>
+
+        <div class="module-source">
+          <pre>
+<code>
+{{ include_raw('style-guide/modules/form-input-errors.html') | escape }}
+</code>
+          </pre>
+        </div>
+
         <div class="errors">
           <p>This represents a single error message</p>
         </div>
