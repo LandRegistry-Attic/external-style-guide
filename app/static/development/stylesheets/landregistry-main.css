@@ -1529,9 +1529,6 @@ pre code {
 .callout--summary .title-plan {
   border: 2px solid white;
 }
-.callout--summary .definition-tabular dd, .callout--summary .definition-tabular--hi-viz dd {
-  font-weight: bold;
-}
 
 .callout--notice {
   background-color: #fff2d3;
