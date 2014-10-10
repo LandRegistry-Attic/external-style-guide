@@ -16,6 +16,19 @@
   margin-bottom: 0;
 }
 
+.expand {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+
+.expand-top {
+  margin-top: $gutter;
+}
+
+.expand-bottom {
+  margin-bottom: $gutter;
+}
+
 
 .legal-division--top {
   margin-top: $gutter;

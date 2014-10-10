@@ -1,0 +1,62 @@
+$pending: $turquoise;
+$previous: $mauve;
+
+.register-changes-pending {
+  counter-reset: li-counter;
+
+  & li {
+    position: relative;
+    padding-left: $gutter + 5;
+  }
+  & li:before {
+    content: counter(li-counter);
+    counter-increment: li-counter;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include core-16;
+    @include border-radius(50%);
+    @include box-sizing(border-box);
+
+    font-weight: bold;
+    background-color: $pending;
+
+    display: inline-block;
+    width: 1.65em;
+    height: 1.65em;
+    padding-top: 0.25em;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+}
+
+.register-changes-previous {
+  margin-top: 0;
+  border-left: 5px solid $previous; 
+
+  li {
+    @extend %contain-floats;
+
+    padding: $gutter-half;
+    padding-left: $gutter;
+  }
+
+  time {
+
+    display: block;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -$gutter;
+      top: $gutter-one-quarter;
+      width: $gutter-half;
+      border-top: 5px solid $previous;
+    }
+  }
+
+}
