@@ -17,6 +17,7 @@
           <li><a href="#search-results">Search results</a></li>
           <li><a href="#details">&lt;details&gt; (demonstrating polyfill)</a></li>
           <li><a href="#faux-details">"Faux details"</a></li>
+          <li><a href="#title-changelog">Changelog for a title</a></li>
         </ul>
 
       </div>
@@ -146,6 +147,31 @@
         <pre>
 <code>
 {{ include_raw('style-guide/modules/faux-details.html') | escape }}
+</code>
+        </pre>
+      </div>
+
+    </div>
+
+    <!-- new unit -->
+
+    <div class="inner-block style-section">
+      <h2 id="title-changelog">Title changelog</h2>
+      <p>Timeline styles for previous and pending changes to a register</p>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Summary</h3>
+      <p class="text">See </p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/title-changelog.html" %}
+      </div>
+
+      <div class="module-source">
+        <pre>
+<code>
+{{ include_raw('style-guide/modules/title-changelog.html') | escape }}
 </code>
         </pre>
       </div>
