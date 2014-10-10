@@ -1878,11 +1878,6 @@ nav ol, nav ul {
   width: 15px;
   border-top: 5px solid #6f72af;
 }
-.register-changes-previous details[open] {
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px dotted #bfc1c3;
-}
 
 @-ms-viewport {
   width: device-width;
