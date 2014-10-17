@@ -9,56 +9,121 @@
     
     <div class="inner-block">
 
-      <h1>Forms</h1>
+    </div>
 
-      <form action="/" method="post" class="form">
+    <div class="inner-block style-section">
+      <h2>Input types</h2>
+    </div>
 
-        <div class="form-group">
-          <label class="form-label" for="example-1">.field-numeric</label>
-          <p class="form-hint">A narrower field for simple numeric input</p>
-          <input type="number" class="form-control field-numeric" id="example-1" name="example-1">
-        </div>
+    <div class="inner-block style-unit">
+      <h3>Numeric input</h3>
+      <p>.field-numeric</p>
 
-        <div class="form-group">
-          <label class="form-label" for="example-1">.form-control-1-2</label>
-          <p class="form-hint">A "half width" field</p>
-          <input type="number" class="form-control form-control-1-2" id="example-1" name="example-1">
-        </div>
+      <div class="module-example">
+        {% include "style-guide/forms/numeric-input.html" %}
+      </div>
 
-        <div class="form-group">
-          <p>.button-secondary</p>
-          <input type="submit" class="button-secondary" value="Edit">
-        </div>
-
-        <h2>Errors</h2>
-
-        <div class="module-example">
-          {% include "style-guide/modules/form-input-errors.html" %}
-        </div>
-
-        <details>
-          <summary>see markup for validation</summary>
-          <div class="module-source">
-            <pre>
+      <details>
+        <summary>see markup for numeric input</summary>
+        <div class="module-source">
+          <pre>
 <code>
-{{ include_raw('style-guide/modules/form-input-errors.html') | escape }}
+{{ include_raw('style-guide/forms/numeric-input.html') | escape }}
 </code>
-            </pre>
-          </div>
-        </details>
-
-        <div class="action-division--top"></div>
-
-        <div class="errors">
-          <p>This represents a single error message</p>
+          </pre>
         </div>
+      </details>
 
-        <ul class="errors">
-          <li>This represents an error message in a list</li>
-          <li>This represents an error message in a list</li>
-        </ul>
+    </div>
 
-      </form>
+    <div class="inner-block style-unit">
+      <h3>Half size input</h3>
+      <p>.form-control-1-2</p>
+
+      <div class="module-example">
+        {% include "style-guide/forms/narrow-input.html" %}
+      </div>
+
+      <details>
+        <summary>see markup for half size input</summary>
+        <div class="module-source">
+          <pre>
+<code>
+{{ include_raw('style-guide/forms/narrow-input.html') | escape }}
+</code>
+          </pre>
+        </div>
+      </details>
+
+    </div><!-- end half size input  -->
+
+    <div class="inner-block style-section">
+      <h2>Buttons</h2>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Secondary button</h3>
+      <p>.button-secondary</p>
+
+      <div class="module-example">
+        {% include "style-guide/forms/secondary-button.html" %}
+      </div>
+
+      <details>
+        <summary>see markup for a secondary button</summary>
+        <div class="module-source">
+          <pre>
+<code>
+{{ include_raw('style-guide/forms/secondary-button.html') | escape }}
+</code>
+          </pre>
+        </div>
+      </details>
+      
+    </div><!-- end secondary button -->
+
+    <div class="inner-block style-section">
+      <h2 id="title-changelog">Validation</h2>
+      <p>Validation styles for forms</p>
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Input errors</h3>
+
+      <div class="module-example">
+        {% include "style-guide/forms/form-input-errors.html" %}
+      </div>
+
+      <details>
+        <summary>see markup for validation</summary>
+        <div class="module-source">
+          <pre>
+<code>
+{{ include_raw('style-guide/forms/form-input-errors.html') | escape }}
+</code>
+          </pre>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="inner-block style-unit">
+      <h3>Other errors</h3>
+
+      <div class="module-example">
+        {% include "style-guide/forms/other-errors.html" %}
+      </div>
+
+      <details>
+        <summary>see markup for other errors</summary>
+        <div class="module-source">
+          <pre>
+<code>
+{{ include_raw('style-guide/forms/other-errors.html') | escape }}
+</code>
+          </pre>
+        </div>
+      </details>
 
     </div>
 
