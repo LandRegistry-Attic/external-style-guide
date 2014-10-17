@@ -36,13 +36,18 @@
           {% include "style-guide/modules/form-input-errors.html" %}
         </div>
 
-        <div class="module-source">
-          <pre>
+        <details>
+          <summary>see markup for validation</summary>
+          <div class="module-source">
+            <pre>
 <code>
 {{ include_raw('style-guide/modules/form-input-errors.html') | escape }}
 </code>
-          </pre>
-        </div>
+            </pre>
+          </div>
+        </details>
+
+        <div class="action-division--top"></div>
 
         <div class="errors">
           <p>This represents a single error message</p>
