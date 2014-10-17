@@ -23,3 +23,25 @@
   margin-top: $gutter;
   border-top: 1px solid $grey-3;
 }
+
+// TODO: rationalise .legal-document and .document
+.document-section {
+  h2 {
+    margin-top: 15px;
+  }
+
+  .document-section__item {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 0;
+
+    .collapse {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(even) {
+      background: $grey-4;
+    }
+  }
+}
+

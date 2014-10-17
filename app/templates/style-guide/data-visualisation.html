@@ -101,6 +101,27 @@
         </div>
 
     </div>
+
+    <div class="inner-block style-unit">
+      <h3>Summarising info</h3>
+      <p class="text"></p>
+
+      <div class="module-example">
+        {% include "style-guide/modules/summarise-info.html" %}
+      </div>
+
+      <details>
+        <summary>see markup for summary</summary>
+        <div class="module-source">
+          <pre>
+<code>
+{{ include_raw('style-guide/modules/summarise-info.html') | escape }}
+</code>
+          </pre>
+        </div>
+      </details>
+
+    </div>
   </div>
 
 </main>
