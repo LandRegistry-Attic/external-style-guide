@@ -2,10 +2,14 @@
 // ==========================================================================
 
 .legal-document--bounds {
-  margin-bottom: $gutter;
+  margin: 0 $gutter $gutter;
   padding: $gutter 0; 
   border-top: 4px solid $light-blue;
   border-bottom: 2px solid $light-blue;
+
+  .inner-block & {
+    margin: 0 0 $gutter;
+  }
 }
 
 .legal-document--item {
@@ -26,22 +30,70 @@
 
 // TODO: rationalise .legal-document and .document
 .document-section {
-  h2 {
-    margin-top: 15px;
+  clear: both;
+  padding: $gutter 0;
+  @extend %contain-floats;
+
+  &:first-child {
+    padding-top: 0;
   }
 
-  .document-section__item {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px 0;
+  &:last-child {
+    padding-bottom: 0;
+  }
 
-    .collapse {
-      margin-bottom: 0;
-    }
-
-    &:nth-child(even) {
-      background: $grey-4;
-    }
+  .button-secondary {
+    margin-bottom: 0;
+    margin-top: -0.25em;
   }
 }
 
+.document-section--bordered {
+  border-top: 1px solid $grey-3;
+}
+
+.document-section__heading {
+  margin-top: $gutter-half;
+}
+
+.document-section__help-def {
+  margin-bottom: $gutter;
+}
+
+.document-section__item {
+  margin: 0;
+  padding: $gutter-half 0;
+
+  &:nth-child(even) {
+    background: $grey-4;
+  }
+
+  ul, p {
+    margin: 0;
+  }
+}
+
+.inner-block .document-section__item {
+  padding: $gutter-half 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.document-section__item--collapse {
+  padding: 0;
+}
+
+.document-section__item--empty-state {
+  margin-right: 0;
+  background: $error-background;
+  border-left: 3px solid #df3034;
+}
+
+.document-section__form--collapse {
+  margin-bottom: $gutter-half;
+  @extend %contain-floats;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}

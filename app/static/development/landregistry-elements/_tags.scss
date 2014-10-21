@@ -27,6 +27,10 @@
   font-size: 0.8em;
 }
 
+.alert-flag--large {
+  font-size: 1em;
+}
+
 .confirm-flag {
   @include highlight-tag($black, $green-25);
 
